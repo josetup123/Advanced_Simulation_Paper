@@ -1,0 +1,103 @@
+\documentclass[preprint,review,12pt,3p,authoryear]{elsarticle}
+
+
+\usepackage{units}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+%\usepackage{supertabular}
+%\usepackage[sort&compress,round,comma,numbers]{natbib}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{algpseudocode}
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+%%% PACKAGES
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+% These packages are all incorporated in the memoir class to one degree or another...
+\usepackage{booktabs, multicol, multirow,longtable}
+\usepackage{tabularx}% http://ctan.org/pkg/tabularx
+\usepackage{pdflscape}
+\setlength\tabcolsep{3pt}
+\usepackage{url}
+\urlstyle{same}
+\usepackage{threeparttable}
+\def\bibsection{\section*{References}}
+\usepackage{subfig}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage{lscape}
+
+
+\usepackage{floatrow}
+\floatsetup[table]{capposition=top}
+\usepackage{float}
+\restylefloat{table}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+
+\usepackage{bm} % use \pmb for bold in math
+\usepackage{gensymb}
+\graphicspath{ {images/} }
+\usepackage{lineno}
+\usepackage[normalem]{ulem}
+
+
+
+\journal{Computer and Industrial Engineering}
+
+\begin{document}
+\begin{frontmatter}
+\title{Two Level Uncapacitated Facility Location Problem with Disruption Uncertainties}
+
+
+%% Group authors per affiliation:
+%\author{Mohammad Ramshani}
+%\author{Xueping Li\corref{mycorrespondingauthor}}
+%\author{Anahita Khojandi}
+%\author{Olufemi Omitaomu}
+%\address{Radarweg 29, Amsterdam}
+%\fntext[myfootnote]{Since 1880.}
+
+%% or include affiliations in footnotes:
+\author[mymainaddress]{Mohammad Ramshani}
+\ead{mramshan@vols.utk.edu}
+\author[mymainaddress]{Jim Ostrowski}
+\ead{jostrows@utk.edu}
+%\author[mymainaddress]{Xueping Li}
+\author[mymainaddress]{Xueping Li\corref{mycorrespondingauthor}}
+\ead{xueping.li@utk.edu}
+\author[mymainaddress]{Kaike Zhang}
+\ead{kzhang7@vols.utk.edu}
+%\author[mymainaddress,mysecondaryaddress]{Olufemi Omitaomu}
+%\author[mythirdaddress]{Jon~Michael Hathaway}
+%\ead[url]{www.elsevier.com}
+
+%\author[mysecondaryaddress]{Xueping Li\corref{mycorrespondingauthor}}
+\cortext[mycorrespondingauthor]{Corresponding author}
+%\ead{support@elsevier.com}
+
+\address[mymainaddress]{Department of Industrial and Systems Engineering, The University of Tennessee at Knoxville, Knoxville, TN 37996, US}
+%\address[mysecondaryaddress]{Urban Dynamics Institute, Oak Ridge National Laboratory, Oak Ridge, Tennessee 37831, US}
+%\address[mythirdaddress]{Department of Civil and Environmental Engineering, The University of Tennessee at Knoxville, Knoxville, TN 37996, US}
+
+
+\doublespacing
+
+\begin{abstract}
+Uncapacitated facility location problems (UFLP) deal with the selection of facilities and assignment of customers to them. Two level UFLPs (TUFLP) consider an additional level of facilities between the customers and the main facilities, through which the customers are connected to the production facilities. Disruption uncertainty introduces more complexity to such problems as it accounts for the probability that facilities may not always be able to satisfy the demand of their assigned customers. In this paper, we study a TUFLP with single assignment under disruption uncertainty. We assume a two-level distribution chain, in which the flow starts from the production unit, goes through distribution centers, and then ends at the customer level. We assume a region based single commodity distribution chain whose components, excluding the customers, are prone to breakdowns due to disasters. We propose two formulations for the problem, discuss them, develop a Tabu search algorithm and a problem specific heuristic (RSS), and interpret the results.
+%Therefore, the disruption matrix includes a covariance of disruptions where components in the same region are more likely to be shut down at the same time.
+\end{abstract}
+
+\begin{keyword}
+Resilient supply chain design, Uncapacitated facility location problems (UFLP), Integer nonlinear programming (INLP), Tabu search, Meta-heuristic
+%stochastic programming\sep Photovoltaic panels\sep climate change\sep energy saving\sep green roofs
+\end{keyword}
+
+\end{frontmatter}
+
+\end{document}
+
+
