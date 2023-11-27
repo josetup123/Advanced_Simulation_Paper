@@ -1,0 +1,29 @@
+\begin{thebibliography}{}
+
+\bibitem[Afghah et~al., 2019]{afghah_wildfire_2019}
+Afghah, F., Razi, A., Chakareski, J., and Ashdown, J. (2019).
+\newblock Wildfire {Monitoring} in {Remote} {Areas} using {Autonomous}
+  {Unmanned} {Aerial} {Vehicles}.
+\newblock arXiv:1905.00492 [cs, eess].
+
+\bibitem[Momeni et~al., 2022]{momeni_coordinated_2022}
+Momeni, M., Soleimani, H., Shahparvari, S., and Afshar-Nadjafi, B. (2022).
+\newblock Coordinated routing system for fire detection by patrolling trucks
+  with drones.
+\newblock {\em International Journal of Disaster Risk Reduction}, 73:102859.
+
+\bibitem[Odonkor et~al., 2019]{odonkor_distributed_2019}
+Odonkor, P., Ball, Z., and Chowdhury, S. (2019).
+\newblock Distributed operation of collaborating unmanned aerial vehicles for
+  time-sensitive oil spill mapping.
+\newblock {\em Swarm and Evolutionary Computation}, 46:52--68.
+
+\bibitem[Phan and Liu, 2008]{phan_cooperative_2008}
+Phan, C. and Liu, H.~H. (2008).
+\newblock A cooperative {UAV}/{UGV} platform for wildfire detection and
+  fighting.
+\newblock In {\em 2008 {Asia} {Simulation} {Conference} - 7th {International}
+  {Conference} on {System} {Simulation} and {Scientific} {Computing}}, pages
+  494--498.
+
+\end{thebibliography}

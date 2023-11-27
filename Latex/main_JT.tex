@@ -1,9 +1,10 @@
 % \documentclass[preprint,review,12pt,3p,authoryear]{elsarticle}
 \documentclass[preprint,review, 11pt,3p,authoryear]{elsarticle}
 
-
+\graphicspath{ {./figs/} }
 \usepackage{units}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
 \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
 
@@ -63,7 +64,7 @@
 
 \begin{document}
 \begin{frontmatter}
-\title{First Person View (FPV) Micro Air Vehicles (MAVs) - An Autonomous and Intelligent Mesh System }
+\title{Enhancing Wildfire Detection: An Agent-Based Simulation Approach}
 
 
 
@@ -104,14 +105,15 @@
 \doublespacing
 
 \begin{abstract}
-The purpose of this study is to develop a cooperative mesh network using FPV lightweight micro-air vehicles (MAVs) outfitted with high-resolution cameras and communication equipment. This network makes it possible for MAVs to interact and cooperate autonomously, increasing the effectiveness of AOI detection and enhancing monitoring in urban settings. These MAVs can recognize activities of interest thanks to machine learning algorithms, particularly computer vision, which minimizes the need for human participation. Routing inside the mesh is optimized using genetic algorithms under a multiple MAV traveling salesman problem formulation (mTSP), guaranteeing effective resource allocation and AOI responsiveness. In order to simulate and study the dispatch and servicing of emergency response teams, discrete event modeling is employed. This method offers insights into the operational dynamics of this networked MAV mesh system, eventually enhancing urban safety and emergency response efficacy.
+Worldwide, ecosystems, communities, and economies are under increased threat from wildfires. Micro Aerial Vehicles (MAVs) and agent-based modeling offer a dynamic method for detecting, preventing, and responding to wildfires. We investigate the potential collaboration between agent-based simulation and MAVs in addressing the dynamic challenges of wildfire management.
+Simulation considers weather, geography, and vegetation, agent-based simulation augments real-time data by the inclusion of wildfire-prone locations. The spread of the fire and locating high-risk regions, to shifting wildfire conditions and help with resource allocation and decision-making. MAVs and agent-based simulation work together to provide a comprehensive strategy to managing and detecting wildfires. The model's situational awareness is improved by including real-world MAV data, which also helps to identify ignition sources and forecast the direction and rate of a fire. We highlight the ability to lessen the effects of wildfires by providing information on how to allocate resources, make evacuation plans, and prepare communities.
 
 % Uncapacitated facility location problems ({\rev {UFLPs}}) deal with the selection of facilities and assignment of customers to them. Two level UFLPs ({\rev {TUFLPs}}) consider an additional level of facilities between the customers and the main facilities, through which the customers are connected to the production facilities. Disruption uncertainty introduces more complexity to such problems as it accounts for the probability that facilities may not always be able to satisfy the demand of their assigned customers. In this paper, we study a TUFLP with single assignment under disruption uncertainty. We investigate a two-level distribution chain, in which the flow starts from the production unit, goes through distribution centers, and then ends at the customer level. We assume a region based single commodity distribution chain whose components, excluding the customers, are prone to breakdowns due to disasters. We develop two mathematical programming formulations for the problem and develop a Tabu search algorithm and a problem specific heuristic (route subset selector - RSS), and interpret the results.
 %Therefore, the disruption matrix includes a covariance of disruptions where components in the same region are more likely to be shut down at the same time.
 \end{abstract}
 
 \begin{keyword}
-Patrolling, Traveling Salesman Problems, Genetic Algorithms, Meta-heuristic, Discrete Simulation
+MAVs, CVRP, Agent Based Simulation, Discrete Simulation, Wildfires
 %stochastic programming\sep Photovoltaic panels\sep climate change\sep energy saving\sep green roofs
 \end{keyword}
 
@@ -123,10 +125,15 @@ Patrolling, Traveling Salesman Problems, Genetic Algorithms, Meta-heuristic, Dis
 \section{Introduction}
 \label{intro}
 
+Wildfires are one of the most expensive and deadly natural catastrophes in the world, particularly in the western United States. In 2018, a catastrophic wildfire known as the Camp Fire was recorded as one of the worst wildfires in the history of California. 
+Yet these catastrophic fires are expected increase by the year 2050 \cite{united_nations} if preventive actions are not taken nor improvement of response services are studied. These fire events are responsible of large-scale evacuation, homes being set on fire, infrastructure being destroyed, millions of hectares of forest resources damaged, and most critically, human lives being in danger.
+Fire detection and monitoring technologies have evidenced an rapid increase such as ground sensors, Unmaned Aerial Vehicle (UAVs), and satellite imagery have been deployed.
+Current systems have the following drawbacks which include delayed fire detection due to missing minor fires in the early stages, relatively high time lag for satellites to overhead the field, and inability to deploy sensors with restricted detecting distance ranges. For instance, a prompt response is desirable as they are likely to put off fire events on the early stages. It is demmed reponse times and proper resource allocation are key components for a prompt and adequated response.
+% This study aims to capitalize on the potential of FPV lightweight micro-air vehicles (MAVs),  outfitted with advanced high-resolution cameras and an integrated communication system to proactively detect and monitor activities of interest (AOIs) in a busy metropolitan area." Our major goal is to create a network of aerial MAVs that is seamlessly integrated, establishing a dynamic mesh system. This novel technique answers the demand for effective and comprehensive metropolitan monitoring. We build a collaborative system in which MAVs may interact with one another, share information, and work together to cover a bigger area more effectively by joining these MAVs in a mesh network. We denote mesh system to the join work 
+% Fast detection of AOIs in the POIs located in certain geographical areas partitioned by quadrants is possible with FPV MAVs. We use cutting-edge Machine Learning techniques, notably computer vision algorithms, to allow autonomous AOI detection. These algorithms enable our MAVs to recognize and categorize AOIs autonomously, minimizing the need for user involvement and shortening reaction times. Each MAV in the mesh network is capable of transmitting to report AOIs to a centralized server using the embedded communication system, ensuring a dispersed and coordinated monitoring effort. Furthermore, we use evolutionary algorithms to improve MAV routing inside the mesh system, based on a multiple traveling salesman problem (mTSP) guaranteeing effective resource allocation and rapid reaction to discovered AOIs. This implies that the MAVs may alter their placements and routes dynamically to give optimal coverage and reaction times. Our research goes beyond the creation of hardware and algorithms, as well. We replicate and carefully examine the dispatch and service activities of emergency response teams using discrete event modeling. Our linked MAV mesh system's efficacy and operating dynamics are better understood as a result, and this highlights the system's importance for expediting emergency response operations and enhancing overall urban safety.
+On the basis of these we center our research effort on a proper allocation of resources and simulation of fire events course of action through the use of optimization based agent based simulation.
+This study aims to capitalize the use of the listed techniques to propose a practical framework for fire events hadling and resource allocaiton in the context of wildfires using a set of heterogeneous agents drones to provide adequate responses when human controllers are not available to initiate and guide the mission.
 
-
-This study aims to capitalize on the potential of FPV lightweight micro-air vehicles (MAVs),  outfitted with advanced high-resolution cameras and an integrated communication system to proactively detect and monitor activities of interest (AOIs) in a busy metropolitan area." Our major goal is to create a network of aerial MAVs that is seamlessly integrated, establishing a dynamic mesh system. This novel technique answers the demand for effective and comprehensive metropolitan monitoring. We build a collaborative system in which MAVs may interact with one another, share information, and work together to cover a bigger area more effectively by joining these MAVs in a mesh network. We denote mesh system to the join work 
-Fast detection of AOIs in the POIs located in certain geographical areas partitioned by quadrants is possible with FPV MAVs. We use cutting-edge Machine Learning techniques, notably computer vision algorithms, to allow autonomous AOI detection. These algorithms enable our MAVs to recognize and categorize AOIs autonomously, minimizing the need for user involvement and shortening reaction times. Each MAV in the mesh network is capable of transmitting to report AOIs to a centralized server using the embedded communication system, ensuring a dispersed and coordinated monitoring effort. Furthermore, we use evolutionary algorithms to improve MAV routing inside the mesh system, based on a multiple traveling salesman problem (mTSP) guaranteeing effective resource allocation and rapid reaction to discovered AOIs. This implies that the MAVs may alter their placements and routes dynamically to give optimal coverage and reaction times. Our research goes beyond the creation of hardware and algorithms, as well. We replicate and carefully examine the dispatch and service activities of emergency response teams using discrete event modeling. Our linked MAV mesh system's efficacy and operating dynamics are better understood as a result, and this highlights the system's importance for expediting emergency response operations and enhancing overall urban safety.
 
 
 
@@ -198,23 +205,65 @@ Fast detection of AOIs in the POIs located in certain geographical areas partiti
 \label{LitReview}
 
 
-Police patrolling is an effective way to reduce crime rates in cities, respond to population needs in a prompt manner, and assist in unfortunate events \cite{kent_decentralised_2019, wilson_effect_1978, ratcliffe_philadelphia_2011}. Yet, authors like \cite{andresen_police_2014} mentions it only generates the displacement of criminal activities and argues regardless the patrolling technique this outcome is expected. The author determines spacial shift is caused by on-foot or motorized patrolling among the reasons for crime displacement. In this article, we work under the hypothesis that the inclusion of MVA patrolling could lead to a spread and wide coverage of the high crime rate areas. The use of MVAs, in combination with a proper routing, will allow this to be achieve. MVAs as patrol agents may lead to the rapid detection of activities of interest. Among those \cite{luo_traffic_2019} focus their research in a highly equipped drone for traffic patrolling. They employ MVAs for AOIs detection while proposing a double-layer arc routing problem (DL-ARP) based upon upon an MILP formulation. They emphasis on the use of heterogeneous task and two different vehicles. Also, a two stage fast heuristic for the addressed vehicle–aircraft cooperative model is implemented. In \cite{momeni_coordinated_2022} a new patrolling perspective that follow a joint utilization of a drone and truck is presented through a modified vehicle routing problem (VRP). A MILP formulation paired with bender's decomposition used to achieve optimally. From the perspective of usability for a large number of POI or also known as "nodes" the algorithm returns no solution in the capped run-time. Other author's method stand as progressive hedging (PH) \cite{rajan_routing_2021}. A more general perspective a join utilization of a drone-truck routing can be observed in \cite{pardalos_drone-truck_2023}. A cooperation for a patrolling based on multiple cars and MAVs can be seen under the work of \cite{yang_programming_2021}. Authors enhance the feasibility of a MVA and truck patrolling via genetic algorithms. Authors consider a variable hovering time that relies on the risk of certain POI. We simplify this problem on the basis of a single car and multiple drone yet we introduce a novel neighboring quadrant coverage via the propose heuristics. \cite{yang_programming_2021} mention scholars have concentrated on resource dispatching during crises crime crisis, but there are few studies on the location, timing, and air-ground coordination of patrol topics. On the basis of this intertwined area. Whereas most author analyze this problem from the perspective of a MAV and patrol car collaboration we fix the initial point yet rely on a classical mTSP problem. 
-mTSP is addressed by \cite{cooper_optimal_2020} who employs a time-varying reward system for visiting different spots inside the search region along with an artificial potential field. 
-
-More related to our research stand \cite{li_new_2013} who employs genetic algorithm to solve. \cite{kent_decentralised_2019} proposes the work on the basis of multi-demic evolution yet provides a standard formulation for the problem. \cite{kiraly_novel_2010} provides a direct approach and based their work this problem obtains a near optimal solution in 80\% of the cases. \cite{murray_using_nodate} provides a comparison over time of the efficiency of the genetic algorithms and performs experimentation in instances with 100 nodes. \cite{rexhepi_solving_nodate, xu_two_2018, jiang_new_2020} extend this initial publication. It is important to note strategies have been used mainly for delivery problems as current literature shows yet our paper analyzes its implementation under a patrolling problem. Such strategies have been used mainly for delivery problems as current literature shows yet our study analyzes its implementation under a patrolling problem. To the best of our knowledge few resources analyze the implementation of a multiple MVA TSP based routing and the inclusion of discrete simulation in the context of urban policing and patrolling. A study elaborated by \cite{wu_analysis_2014} covers the implementation of a systematic procedure to ensure proper allocation of resources while maximizing yieldings for a freeway patrol system. Authors employ a HCM approach and focus in the vehicle dispatching and routing. Results reveal an improvement of the service time of 9.28\% after the the implementation of a district method. Also, in \cite{luo_traffic_2019} a patrolling routing problem takes place in urban settings. Finally, \cite{zhang_simulation_2014} evaluates police patrol distracting plans using a discrete-event simulation model, contrasts the assessment of distracting plans using agent-based and discrete-event simulations, and provides a response surface technique to identify optimum or sub-optimal distracting plans. The article suggests an iterative search method based on an experimental design to examine the correlation between performance measurements and redistricting algorithm parameters. Our work combines the use of optimization techniques, use of heuristic approaches and the non-existent in up to date literature discrete simulation. The application of the techniques in urban setting  poses as a new contribution in the context of patrolling and policing.
-
-
-% Patrolling systems
-
+Authors in \cite{afghah_wildfire_2019} present a multi-autonomous UAV disaster monitoring approach for remote areas. These UAVs are either on standby or positioned in observation towers. They automatically establish leader-follower coalitions with competent UAVs as leaders when a fire is detected in order to efficiently monitor the fire zone. According to simulation studies, this fully distributed strategy is scalable for large coverage areas, such as forest fires, and performs comparably to centralized approaches. This system runs independently and doesn't need leaders to communicate with one another.
+The importance of this approach relies in the use of UAVs and non-communicated this resemble conditions in which certain type of heterogeneous agent may not be employed in certain fire event conditions they may not properly interact.
+Whereas, in \cite{momeni_coordinated_2022} analyze a drone-truck system using the BD algorithm and the AEC technique, presenting a multi-objective mathematical programming model. The findings indicate a trade-off between patrolling time and cost, with higher expenses associated with quicker patrolling during some seasons. It is determined that the coordinated system saves money and saves time. When dealing with large-scale issues, the BD method works well. Environmental conditions, drone overheating, wildlife interference, and lost remote control contact are some of the limitations. Although it should take into account practical limitations, this approach can supplement satellite-based forest observation.
+We aim at a joint utilization of agents only in certain conditions where fire event conditions are suitable for such job. On top of this we prpose a new CVRP formulation for adressed the problem. Lastly, we employ real data by the use of AirNow API information this addresses the problem on a realtime basis.
+The research in \cite{Ruetten} introduces the Mesh Reliance Architecture, a method for arranging agents swarms. This novel architecture keeps all of the UAVs in the swarm connected and allows different swarm formations. The study used neural network and genetic algorithm simulations to assess the design. With every additional drone, the computational time rose linearly. Subsequent research endeavors to refine the evolutionary algorithms, investigate diverse approaches, and contemplate parallel processing as a means of diminishing runtime. Making the Mesh Reliance Architecture dynamic to adjust to shifting configurations is the primary difficulty. We investigate further investigate these interactions by the use of clustered agents yet implement the model on an agent-based simulation basis.
+Finally, in \cite{odonkor_distributed_2019} a aerial swarms are used in this study to effectively map offshore oil spills. They provide a decentralized method for mission-state-adaptive waypoint planning that draws inspiration from dynamic occupancy grids for oil finding and particle swarm dynamics. It outperformed random walk and spiral search techniques, showed good mapping accuracy, and took less time than exhaustive search. The resilience of the system varied according on the complexity of oil spills.
+Among other authors, \cite{phan_cooperative_2008} present a cooperation between UAVs and UGVs.
 
 
 
 \section{Model Formulation}
 \label{model}
 
+
+
+\subsection{Data Inputs}
+
+
+
+\subsubsection{Landsat}
+% First we use landasat
+Latency - defined as time since satellite observation and the data being available in FIRMS:
+within 30-60 minutes for the continental US (CONUS), southern Canada and northern Mexico.
+
+The Landsat 8 & 9 Active Fire and Thermal Anomalies product, generated from the Landsat Operational Land Imager (OLI) shows active fire detections and thermal anomalies, such as volcanoes, and gas flares. The fire layer is useful for studying the spatial and temporal distribution of fire, to locate persistent hot spots such as volcanoes and gas flares, and to locate the source of air pollution from smoke that may have adverse human health impacts.
+
+Landsat OLI and its predecessors, the Landsat 4-5 Thematic Mapper (TM) and the Landsat 7 Enhanced Thematic Mapper Plus (ETM+), have provided multispectral observations and Earth science data products since 1982. The 30-m data provide spatially refined active fire detection data relative to MODIS and VIIRS (a 30-m pixel is approximately 0.001 of the area of a 1-km MODIS pixel and approximately 0.0625 of the area of a VIIRS 375-m pixel). The underlying fire layer algorithm and the spatial/spectral resolution of the sensor provide the ability to detect very small fires compared to MODIS, VIIRS and other relatively coarse spatial resolution sensors with relatively improved nighttime performance. Flaming fires as small as ∼4m2 and ∼1m2 have a greater than 50% probability of detection during daytime and nighttime observations, respectively. Consequently, Landsat active fire detection data can provide limited tactical scale data in support of fire management as well as other science applications requiring improved fire mapping fidelity.
+\subsubsection{VIIRS}
+\subsubsection{MODIS}
+
+% \subsubsection{IRWIN}
+https://firms.modaps.eosdis.nasa.gov/usfs/map/#m:tsd;d:2023-11-25..2023-11-26,2023-11-25;@-77.7,39.7,10.2z
+% ACTIVE WILDFIRE
+
 \subsection{Problem Modeling}
-In this section, we first present the notations of the model as well as the mathematical formulation for the {\rev{mTSPGA}  to minimize the facility cost as well as transportation cost for a {\rev{mTSPGA}} for the proposed multi MAV problem. The method relies on a set A of MAVs from 1 to M, the indices $i$ and $j$ to represent tasks from the set T of tasks 1 to $N$, and the matrix $C_{ija}$ to represent the cost of an agent's trip from task $i$ to task $j$.
-We also define the three-index binary decision variable as follows:
+
+
+
+
+
+% In this section, we first present the notations of the model as well as the mathematical formulation for the {\rev{mTSPGA}  to minimize the facility cost as well as transportation cost for a {\rev{mTSPGA}} for the proposed multi MAV problem. The method relies on a set A of MAVs from 1 to M, the indices $i$ and $j$ to represent tasks from the set T of tasks 1 to $N$, and the matrix $C_{ija}$ to represent the cost of an agent's trip from task $i$ to task $j$.
+% We also define the three-index binary decision variable as follows:
+
+
+% The UAV task is to visit the assigned waypoints and drop water there. Each UAV is assumed to be able to visit nmax waypoints, due to water tank capacity, and can put out a burning circular area of a certain radius. The problem is to generate the waypoints in a way that can optimally slow down the fire front evolution and effectively contain the fire altogether. A dynamic growth model of forest fire fronts is available in the literature [9]. The currently investigated method is to model the effect of burnt-out zone on the shape and rate of spread of the fire front. Once the effect of the water-dropping action of the UAVs on the dynamic evolution of the fire is modelled, the task generation problem can be formulated as a control problem. The proposed approach is currently being investigated.
+
+
+% The criticality of fire events waypoints on a basis of an intensity marker per node
+% must be visited by each agent in order to dump water. 
+
+The problem relies on establishing waypoints for firefighting incidents by applying the principles of a capacitated vehicle routing problem. 
+This optimization aims to enhance the efficiency of the water dumping process while considering the attributes of the agents involved.
+On a C-VRP foundation, it is expected that agents may go to the waypoints while do not overuse their designed capacity. 
+The challenge is to create the waypoints in a way that can successfully stop the spread of the fire and slow down the fire evolution. 
+Dynamic development model of forest fire is represented through agent based modeling. The formulation for the vehicle routing problem is presented lines below.
+The proposed set of POIs is generated randomly and combined with the manually selected POIs for experimentation process yet it relies on real information provided by AirNow \copyright. 
+Each node is calculated following a eclidian distance. Calculated intensities are ordered maintaining adjacency. A for loop is designed to iterate over the ordered set of points $I$. Each of the $i$ points receives the parameters containing the POIs and agents. 
+The algorithm will return a minimized path routing upon fulfillment 
+of the capcity of the agents. \\
 
 
 \begin{table}[!htbp]
@@ -223,29 +272,35 @@ We also define the three-index binary decision variable as follows:
 \footnotesize
 \label{Indx}
 \begin{tabular}{ll}
-\textbf{Index}                   & \textbf{Definition}                                                          \\
-$i$                              & Index of initial location \\
+\textbf{Variables}                   & \textbf{Definition}                                                          \\
+$i$                              & Index of initial node \\
 %%, where $i \in I$                                              
-$j$                              & Index of ending location \\
+$j$                              & Index of ending node \\
 %%, where $j \in J$                                           
 % $k$                              & Index of POI Task \\
 %%, where $k \in K$                     
 
-$v$                              & Index MAV in travel \\
+$depot$                              & Index of deport \\
 %%, where $k \in K$               
+$x_{i,j}$                              & Binary variable selection from point $i$ to $j$ \\
 
-$t$                              & Index POI task  \\
-%%, where $k \in K$               
-\textbf{Binary variables}        &                                                                              \\
-$x_{ijm}$                        & Equals to 1, if MAVs $m$ visits node $j$ from node $j$ immediately after; 0, otherwise \\
-$u_{i}$                 & Auxiliary non-negative decision variable corresponding to the $i$th variable  \\
+$u_{i}$                              & MTZ variable for node $i$ \\
+$u_{j}$                              & MTZ variable for node $j$ \\
+% \textbf{Binary variables}        &                                                                              \\
+% $x_{ijm}$                        & Equals to 1, if MAVs $m$ visits node $j$ from node $j$ immediately after; 0, otherwise \\
+% $u_{i}$                 & Auxiliary non-negative decision variable corresponding to the $i$th variable  \\
 
-$u_{j}$                 & Auxiliary non-negative decision variable corresponding to the $j$th variable   \\
+% $u_{j}$                 & Auxiliary non-negative decision variable corresponding to the $j$th variable   \\
 % $y_i$                            & Equals to 1, if depot $i$ is established {\rev{; 0, otherwise}                                         \\
 % $t_j$                            & Equals to 1, if satellite $j$ is established {\rev{; 0, otherwise}                                     \\
 \textbf{Parameters}              &                                                                              \\
-$N$                        & Maximun number of POIs                \\
-$M$                          & Maximun number of MAVs                                              \\
+$dempoints$                        & List of nodes enumeration                 \\
+$k$                          & Number of agents \\
+
+$Q$                          & Agent's capacity \\
+$q$                          & Fire intensity demand for fire nodes  \\
+
+$lengths$                          & Fire intensity required   \\
 % $p_{j}$                          & Failure probability of satellite $j$                                           \\
 % $p_{ij\uparrow}$                 & Probability that primary route $ij$ is not disrupted                          \\
 % $p_{ij\downarrow ro \uparrow}$   & Probability that primary route $ij$ is disrupted and backup route $ro$ is not disrupted   \\
@@ -263,8 +318,8 @@ $M$                          & Maximun number of MAVs                           
 
 
 
-The objective, Equation (\ref{eq01}), is to minimize the total cost of all the
-MAVs traveling between the assigned tasks.
+% The objective, Equation (\ref{eq01}), is to minimize the total cost of all the
+% MAVs traveling between the assigned tasks.
 
 % There are several approaches to formulate the Multiple Traveling Salesman Problem, commonly known as the Multi-Agent Traveling Salesman Problem. 
 
@@ -315,9 +370,11 @@ MAVs traveling between the assigned tasks.
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[scale=0.65]{Example_1/Latex/figs/Map.png}
+\includegraphics[scale=0.65]{figs/Infograph.pdf}
 %\vspace{-10mm}
-\caption{Area of interest is separated into quadrants. Each quadrant is labeled into POIs so the MAVs perform their search for AOIs. Each of the quadrant's navigation is addressed by a multiple MAV traveling salesman problem (TSP) which in this article we have denominated mTSPGA.}
+\caption{Quantified intenside per node is listed on the right while capacities per agent are listed on the left. Wildfire areas are labeled on a basis of fire intensity and agent fire capacity. 
+Area shown represents 6 intensity zones and 20 nodes. Node 0 represents the operation based centralized location where all fire equipment will be distributed to the wildfire location. Nodes are extrapolated form the Airnow\copyright official API service and serve as the status of the fire event (Agent). This are recalculated on a temporal basis and re considered for capacity routing purposes.
+Internal caracteristics of the agents are considered within the agent-based simulation interacting with the fire event and other agents. Forecasted caracteristics of the fire event are included.}
 \label{fig01}
 \end{figure}
 
@@ -326,38 +383,38 @@ MAVs traveling between the assigned tasks.
 
 
 % \begin{figure}
-\begin{figure}
-  \centering
-  % \texttt{subfigure} with \texttt{[t]}op alignment
+% \begin{figure}
+%   \centering
+%   % \texttt{subfigure} with \texttt{[t]}op alignment
 
-  \medskip
+%   \medskip
 
   
-  \begin{subfigure}{0.95\linewidth}
-    \centering\includegraphics[width=.5\linewidth]{Example_1/Latex/figs/second.png}
-    \caption{First quadrant depicting areas of interest and through the geographic information system software. Illustrated node "0" denotes the initial and ending point of departure of the FVP MAVs.}
-  \end{subfigure}
-  \begin{subfigure}{0.95\linewidth}
-    \centering\includegraphics[width=.5\linewidth]{Example_1/Latex/figs/third.png}
-    \caption{Extrapolated POIs to be considered as nodes of for the mTSPGA algorithm}
-  \end{subfigure}
-  \begin{subfigure}{0.95\linewidth}
-    \centering\includegraphics[width=.5\linewidth]{Example_1/Latex/figs/fourth.png}
-    \caption{TSP routing after the application of the genetic algorithms }
-  \end{subfigure}
+%   \begin{subfigure}{0.95\linewidth}
+%     \centering\includegraphics[width=.5\linewidth]{figs/second.png}
+%     \caption{First quadrant depicting areas of interest and through the geographic information system software. Illustrated node "0" denotes the initial and ending point of departure of the FVP MAVs.}
+%   \end{subfigure}
+%   \begin{subfigure}{0.95\linewidth}
+%     \centering\includegraphics[width=.5\linewidth]{figs/third.png}
+%     \caption{Extrapolated POIs to be considered as nodes of for the mTSPGA algorithm}
+%   \end{subfigure}
+%   \begin{subfigure}{0.95\linewidth}
+%     \centering\includegraphics[width=.5\linewidth]{figs/fourth.png}
+%     \caption{TSP routing after the application of the genetic algorithms }
+%   \end{subfigure}
 
-  \end{figure}
+%   \end{figure}
     % \centering
     % \begin{subfigure}
-    % \includegraphics[width=0.60\textwidth]{Example_1/Latex/figs/second.png}
+    % \includegraphics[width=0.60\textwidth]{figs/second.png}
     % \caption{(a) Figure (b) blah (c) blah }
     % \end{subfigure}
     % \begin{subfigure}
-    % \includegraphics[width=0.60\textwidth]{Example_1/Latex/figs/second.png}
+    % \includegraphics[width=0.60\textwidth]{figs/second.png}
     % \caption{(a) Figure (b) blah (c) blah }s
     % \end{subfigure}
-    % % \subfigure{\includegraphics[width=0.48\textwidth]{Example_1/Latex/figs/third.png}} 
-    % % \subfigure{\includegraphics[width=0.48\textwidth]{Example_1/Latex/figs/fourth.png}}
+    % % \subfigure{\includegraphics[width=0.48\textwidth]{figs/third.png}} 
+    % % \subfigure{\includegraphics[width=0.48\textwidth]{figs/fourth.png}}
     
     
  
@@ -365,7 +422,7 @@ MAVs traveling between the assigned tasks.
 
 % \begin{figure}[!htbp]
 % \centering
-% \includegraphics[scale=0.65]{Example_1/Latex/figs/second.png}
+% \includegraphics[scale=0.65]{figs/second.png}
 % %\vspace{-10mm}
 % \caption{Each customer is supplied through a primary and a backup supply route in order to minimize the cost of facility and transportation while considering disruption of the facilities.}
 % \label{fig01}
@@ -374,7 +431,7 @@ MAVs traveling between the assigned tasks.
 
 % \begin{figure}[!htbp]
 % \centering
-% \includegraphics[scale=0.65]{Example_1/Latex/figs/second.png}
+% \includegraphics[scale=0.65]{figs/second.png}
 % %\vspace{-10mm}
 % \caption{Each customer is supplied through a primary and a backup supply route in order to minimize the cost of facility and transportation while considering disruption of the facilities.}
 % \label{fig01}
@@ -382,7 +439,7 @@ MAVs traveling between the assigned tasks.
 
 
 
-As illustrated in Figure \ref{fig01}, we assign MAVs with a set of AOI locations. That is, AOI is visited and analyzed through the visit of these nodes. Table \ref{Indx} summarizes the notation used in model formulation. \\
+% As illustrated in Figure \ref{fig01}, we assign MAVs with a set of AOI locations. That is, AOI is visited and analyzed through the visit of these nodes. Table \ref{Indx} summarizes the notation used in model formulation. \\
 
 
 
@@ -405,42 +462,53 @@ As illustrated in Figure \ref{fig01}, we assign MAVs with a set of AOI locations
 
 \begin{equation}
 \label{eq01}
-\min z = \sum_{i}^{N} \sum_{j}^{N} \sum_{m}^{M}  c_{ijv} x_{ijv} 
+\min z =   \sum_{i,j} lengths_{i,j} *  x_{i,j}
 \end{equation}
 
 
 
 \begin{equation}
 \label{eq02}
-s.t. \sum_{i=1}^{N} \sum_{m=1}^{M} =1, \forall j
+s.t. \sum_{j} x_{i,j} =1, \forall i \in dempoints
 \end{equation}
 
+
+\begin{equation}
+  \label{eq02_2}
+  s.t. \sum_{j} x_{i,j} =1, \forall j \in dempoints
+  \end{equation}
+  
+  
 
 
 \begin{equation}
 \label{eq03}
-\sum_{i=1}^{N} x^{ijk} - \sum_{j=1}^{N} x^{tjv} =0 \qquad \forall v \in V, t \in T
+\sum_{i} x^{(depot,j)} =k  \forall j \in dempoints
 \end{equation}
 
 
 
 \begin{equation}
 \label{eq04}
-\sum_{j=1}^{N} x_{ijm} = 1 \qquad \forall  v  \in V 
+u_{i} =q_{i}  \forall  \in dempoints
 \end{equation}
-
 
 
 \begin{equation}
-\label{eq05}
-\mu_i - \mu_j + N \sum_{v=1}^M x_{ijv} <= N-1,  1 \qquad \forall i != j !=1
-\end{equation}
+  \label{eq05}
+  u_{i} =Q  \forall  i  \in dempoints
+  \end{equation}
 
 \begin{equation}
 \label{eq06}
- x_{ijv} \in \{0,1\} \qquad  \forall i,j,m
+q_{depot} = 0 
 \end{equation}
 
+
+\begin{equation}
+  \label{eq07}
+   u_{i} - u_{j} + Q * x_{i,j}+ (Q-q_i-q_j) * x_{j,i}<= Q - q_{j} \forall  i,j  \in dempoints  j \not\in depot
+  \end{equation}
 
 
 % /*
@@ -468,44 +536,44 @@ s.t. \sum_{i=1}^{N} \sum_{m=1}^{M} =1, \forall j
 
 
 
-Equation (\ref{eq01})'s goal is to reduce the overall cost of all the agents' travel between the given tasks. Constraints of Equation (\ref{eq02}) ensure that each task is only visited once. While the flow conservation requirements of Equation (\ref{eq03}) mandate that once an agent visits a task, they must also leave it.  Each agent is only utilized once due to the restrictions in Equation (\ref{eq04}), and the subtour elimination constraints in Equation (\ref{eq05}) are ensured by the extra non-negative auxiliary decision variables (sometimes referred to as "node potentials"), with ui corresponding to the ith job. A direct solution strategy may be problematic and unfit for a decentralized implementation because of the NP-hard nature of the mTSPGA. As a result, the strategy in this research is to apply a Genetic Algorithm to heuristicly find the answer. Our model will perform the exploration of nodes or AOI labeled in certain regions $q \in Q$, this covers one of the quadrants in the set $Q$. In order to perform a complete coverage of the area we aim at performing a randomized iterative neighboring area assignation as shown in Figure \ref{Indx}. The highlighted region shows each of the neighboring to be completed in a total area $u \in U$. \\ 
+% Equation (\ref{eq01})'s goal is to reduce the overall cost of all the agents' travel between the given tasks. Constraints of Equation (\ref{eq02}) ensure that each task is only visited once. While the flow conservation requirements of Equation (\ref{eq03}) mandate that once an agent visits a task, they must also leave it.  Each agent is only utilized once due to the restrictions in Equation (\ref{eq04}), and the subtour elimination constraints in Equation (\ref{eq05}) are ensured by the extra non-negative auxiliary decision variables (sometimes referred to as "node potentials"), with ui corresponding to the ith job. A direct solution strategy may be problematic and unfit for a decentralized implementation because of the NP-hard nature of the mTSPGA. As a result, the strategy in this research is to apply a Genetic Algorithm to heuristicly find the answer. Our model will perform the exploration of nodes or AOI labeled in certain regions $q \in Q$, this covers one of the quadrants in the set $Q$. In order to perform a complete coverage of the area we aim at performing a randomized iterative neighboring area assignation as shown in Figure \ref{Indx}. The highlighted region shows each of the neighboring to be completed in a total area $u \in U$. \\ 
 
 
 
-\begin{algorithm}
-\color{black}
-\begin{algorithmic}
-\STATE Initialize $u$ as an element of $U$
-  % \STATE Initialize $q$ and $q$ as null
-%   \FORALL{$u \in U$}
+% \begin{algorithm}
+% \color{black}
+% \begin{algorithmic}
+% \STATE Initialize $u$ as an element of $U$
+%   % \STATE Initialize $q$ and $q$ as null
+% %   \FORALL{$u \in U$}
   
-%   % \STATE Set $q$ as $q[0]$;
-  % \STATE Set $Model$ to problem (\ref{eq01})-(\ref{eq007})
-  % \FORALL{$k \in K$}
-  \STATE Initialize POIs in area $q$ 
+% %   % \STATE Set $q$ as $q[0]$;
+%   % \STATE Set $Model$ to problem (\ref{eq01})-(\ref{eq007})
+%   % \FORALL{$k \in K$}
+%   \STATE Initialize POIs in area $q$ 
   
-  \STATE Separate the universe area into quadrants with a max distance equal to two times the flying distance of the least battery endurance drone. 
-  \FORALL{$q \in Q$}
-    \WHILE{$f(x,y)$ is within conditions }
-  \STATE $f(x,y)$ $<=$ $mTSPGA(POIs,MAVs)$
-  
-  
-  
-\ENDWHILE
-  \RETURN $f(x,y)$ objective function
+%   \STATE Separate the universe area into quadrants with a max distance equal to two times the flying distance of the least battery endurance drone. 
+%   \FORALL{$q \in Q$}
+%     \WHILE{$f(x,y)$ is within conditions }
+%   \STATE $f(x,y)$ $<=$ $mTSPGA(POIs,MAVs)$
   
   
-  \ENDFOR
-  % \FORALL{$c^w_{ijrok} \notin Subset$}
-  % \STATE Add $c^w_{ijrok}=0$ to $Model$
-  % \ENDFOR
   
-\end{algorithmic}
-\caption{Pseudo-code for the developed mTSPGA and iterative neighborhood exploration algorithm.\label{Iterative}}
+% \ENDWHILE
+%   \RETURN $f(x,y)$ objective function
+  
+  
+%   \ENDFOR
+%   % \FORALL{$c^w_{ijrok} \notin Subset$}
+%   % \STATE Add $c^w_{ijrok}=0$ to $Model$
+%   % \ENDFOR
+  
+% \end{algorithmic}
+% \caption{Pseudo-code for the developed mTSPGA and iterative neighborhood exploration algorithm.\label{Iterative}}
 
-\end{algorithm}
+% \end{algorithm}
 
-The presented Algorithm \ref{Iterative} shows a joint utilization of the mTSPGA algorithm and a neighboring technique to cover certain universe $u$ in the set of universes $U$. $Q$ is an ordered set of adjacent quadrants $q$ so the truck at point "0" is located equidistant from each of the quadrants. Then, a set of POIs is generated randomly and combined with the manually selected POIs (Patrolling expert-designated points). Each quadrant is generated following a max linear distance equal to two times the flying distance of the least battery endurance drone. Then, the designated quadrants are ordered maintaining adjacency. A for loop is designed to iterate over the ordered set of points $Q$. Each of the $q$ points receives the parameters containing the POIs and MAVs. The algorithm will return a minimized path routing upon fulfillment of the performance condition of the least battery endurance drone. \\
+% The presented Algorithm \ref{Iterative} shows a joint utilization of the mTSPGA algorithm and a neighboring technique to cover certain universe $u$ in the set of universes $U$. $Q$ is an ordered set of adjacent quadrants $q$ so the truck at point "0" is located equidistant from each of the quadrants. Then, 
 
 
 % \subsection{Genetic Algorithms}
@@ -1021,7 +1089,7 @@ The presented Algorithm \ref{Iterative} shows a joint utilization of the mTSPGA 
 
 \bibliographystyle{apalike}
 
-\bibliography{Example_1/Latex/bib}
+\bibliography{bib.bib}
 
 
 
