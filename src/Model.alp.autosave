@@ -442,51 +442,6 @@ String pythonScript1 = "H:\\My Drive\\Advanced_Simulation\\Advanced_Simulation_P
 					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
 
 			<Presentation>
-				<GISMap>
-					<Id>1698939144925</Id>
-					<Name><![CDATA[map]]></Name>
-					<X>60</X><Y>60</Y>
-					<Label><X>0</X><Y>-10</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>920</Width>
-					<Height>500</Height>
-					<GISShapes>
-					</GISShapes>
-					<Latitude>35.75368553114789</Latitude>
-					<Longitude>-85.22660048309194</Longitude>
-					<Scale>3800000</Scale>
-					<BorderColor>-4144960</BorderColor>
-					<FillColor>-1</FillColor>
-					<ShowTiles>true</ShowTiles>
-					<TileURLProvider>ANYLOGIC</TileURLProvider>
-					<CustomTileURL>false</CustomTileURL>
-					<TileURL><![CDATA[https://a.tile.openstreetmap.org/[zoom]/[x]/[y].png]]></TileURL>				
-					<RouteProviderType>WEB_SERVICE</RouteProviderType>
-					<RouteNotFound>CREATE_STRAIGHT_LINE</RouteNotFound>
-					<OnlineRouteProvider>ANYLOGIC</OnlineRouteProvider>
-					<TransportType>CAR</TransportType>
-					<RoutingMethod>FASTEST</RoutingMethod>
-					<PathfindingAlgorithm>DIJKSTRABI</PathfindingAlgorithm>
-					<CustomRouteProvider>false</CustomRouteProvider>
-					<RouteSourceResourceReference>
-					</RouteSourceResourceReference>
-					<RouteGraphResourceReference>
-					</RouteGraphResourceReference>
-					<Search>
-						<Bottom>23.849822742617885</Bottom>
-						<Left>-126.83572982295074</Left>
-						<Top>51.488842623521634</Top>
-						<Right>-61.16427017704928</Right>
-					</Search>	
-					<MapScaleBasedGeneralization>true</MapScaleBasedGeneralization>
-					<AbsolutePrecisionGeneralization>1000</AbsolutePrecisionGeneralization>
-
-
-				</GISMap>
 				<Control Type="Button">
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1699294869544</Id>
@@ -1795,7 +1750,7 @@ return 0;]]></Body>
 	<RunConfiguration ActiveObjectClassId="1698938632149">
 		<Id>1698938632174</Id>
 		<Name><![CDATA[RunConfiguration]]></Name>
-		<MaximumMemory>512</MaximumMemory>
+		<MaximumMemory>2048</MaximumMemory>
 		<ModelTimeProperties>
 			<StopOption><![CDATA[Stop at specified time]]></StopOption>
 			<InitialDate><![CDATA[1698883200000]]></InitialDate>	
@@ -1822,7 +1777,7 @@ return 0;]]></Body>
 			<Id>1698938632158</Id>
 			<Name><![CDATA[Simulation]]></Name>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
-			<MaximumMemory>512</MaximumMemory>
+			<MaximumMemory>4096</MaximumMemory>
 			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 			<SeedValue>1</SeedValue>
