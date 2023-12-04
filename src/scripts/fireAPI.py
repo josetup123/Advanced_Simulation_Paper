@@ -10,8 +10,10 @@ import datetime
 import pytz
 from datetime import datetime
 
-
-
+import mysql.connector
+from sqlalchemy import create_engine
+from sqlalchemy.sql import text
+from sqlalchemy.orm import sessionmaker
 """
 https://firms.modaps.eosdis.nasa.gov/academy/
 https://firms.modaps.eosdis.nasa.gov/usfs/active_fire/#kml-kmz
@@ -52,10 +54,11 @@ def delete_all_files_in_folder(folder_path):
 
 # Example: Delete all files from a folder named 'example_folder'
 folder_path = '../data'
-delete_all_files_in_folder(folder_path)
+# delete_all_files_in_folder(folder_path)
 
 
-current_date = datetime.now().strftime("%Y-%m-%d")
+current_date_time = datetime.utcnow()
+current_date=current_date_time.strftime("%Y-%m-%d")
 
 print(current_date)
 
@@ -108,7 +111,7 @@ area_url = 'https://firms.modaps.eosdis.nasa.gov/api/area/csv/' + MAP_KEY + '/LA
 
 landsat = pd.read_csv(area_url)
 # H:\My Drive\Advanced_Simulation\Advanced_Simulation_Paper\src\data
-# landsat.to_csv('../data/landsat.csv',index=False)
+landsat.to_csv('../data/landsat.csv',index=False)
 
 
 
@@ -139,7 +142,7 @@ area_url = 'https://firms.modaps.eosdis.nasa.gov/api/area/csv/' + MAP_KEY + '/MO
 
 modis = pd.read_csv(area_url)
 # H:\My Drive\Advanced_Simulation\Advanced_Simulation_Paper\src\data
-# modis.to_csv('../data/modis.csv',index=False)
+modis.to_csv('../data/modis.csv',index=False)
 
 
 
@@ -190,7 +193,7 @@ area_url = 'https://firms.modaps.eosdis.nasa.gov/api/area/csv/' + MAP_KEY + '/VI
 
 viirs = pd.read_csv(area_url)
 # H:\My Drive\Advanced_Simulation\Advanced_Simulation_Paper\src\data
-# viirs.to_csv('../data/viirs.csv',index=False)
+viirs.to_csv('../data/viirs.csv',index=False)
 
 
 
@@ -352,13 +355,15 @@ def format_time(time_value):
 if landsat.shape[0]>0:
     print(landsat)
     landsat['datetime_column'] = pd.to_datetime(landsat['acq_date'].astype('str') + ' ' + landsat['acq_time'].astype('str').apply(format_time), format='%Y-%m-%d %H%M')
+    landsat['time_sinceupdate'] = (current_date_time-landsat['datetime_column']).dt.total_seconds() / 3600
     # Convert UTC to local timezone
     utc_timezone = pytz.utc
     local_timezone = pytz.timezone('America/New_York')  # Replace 'YOUR_LOCAL_TIMEZONE' with your local timezone
     landsat['datetime_column'] = landsat['datetime_column'].dt.tz_localize(utc_timezone).dt.tz_convert(local_timezone)
     # Apply the function to the specified column
     landsat['datetime_column'] = landsat['datetime_column'].dt.strftime("%Y-%m-%d %H%M")
-    landsat=landsat[['latitude','longitude','datetime_column','confidence','daynight','satellite']]
+    
+    landsat=landsat[['latitude','longitude','datetime_column','confidence','daynight','satellite','time_sinceupdate']]
 else:
     print("LANDSAT NOT AVAILABLE")
 
@@ -367,13 +372,14 @@ else:
 if modis.shape[0]>0:
     print(modis)
     modis['datetime_column'] = pd.to_datetime(modis['acq_date'].astype('str') + ' ' + modis['acq_time'].astype('str').apply(format_time), format='%Y-%m-%d %H%M')
+    modis['time_sinceupdate'] = (current_date_time-modis['datetime_column']).dt.total_seconds() / 3600
     # Convert UTC to local timezone
     utc_timezone = pytz.utc
     local_timezone = pytz.timezone('America/New_York')  # Replace 'YOUR_LOCAL_TIMEZONE' with your local timezone
     modis['datetime_column'] = modis['datetime_column'].dt.tz_localize(utc_timezone).dt.tz_convert(local_timezone)
     # Apply the function to the specified column
     modis['datetime_column'] = modis['datetime_column'].dt.strftime("%Y-%m-%d %H%M")
-    modis=modis[['latitude','longitude','datetime_column','confidence','daynight','satellite']]
+    modis=modis[['latitude','longitude','datetime_column','confidence','daynight','satellite','time_sinceupdate']]
 else:
     print("MODIS NOT AVAILABLE")
 
@@ -382,28 +388,71 @@ else:
 if viirs.shape[0]>0:
     print(viirs)
     viirs['datetime_column'] = pd.to_datetime(viirs['acq_date'].astype('str') + ' ' + viirs['acq_time'].astype('str').apply(format_time), format='%Y-%m-%d %H%M')
+    viirs['time_sinceupdate'] = (current_date_time-viirs['datetime_column']).dt.total_seconds() / 3600
     # Convert UTC to local timezone
     utc_timezone = pytz.utc
     local_timezone = pytz.timezone('America/New_York')  # Replace 'YOUR_LOCAL_TIMEZONE' with your local timezone
     viirs['datetime_column'] = viirs['datetime_column'].dt.tz_localize(utc_timezone).dt.tz_convert(local_timezone)
     # Apply the function to the specified column
     viirs['datetime_column'] = viirs['datetime_column'].dt.strftime("%Y-%m-%d %H%M")
-    viirs=viirs[['latitude','longitude','datetime_column','confidence','daynight','satellite']]
+    viirs=viirs[['latitude','longitude','datetime_column','confidence','daynight','satellite','time_sinceupdate']]
 else:
     print("VIIRS NOT AVAILABLE")
 
 dataframes=[]
-for i in [landsat,modis,viirs]:
+for i in [landsat,modis,viirs]: #
     if i.shape[0]>0:
         dataframes.append(i)
 data=pd.concat(dataframes)
 
 
-
-
+#WHOLE USA
+# data = data[(data['latitude'] > 25) & (data['latitude'] < 49) & (data['longitude'] > -124.8) & (data['longitude'] < -66.9)]
 #TENNESSEE
-data = data[    (data['latitude'] > 35.0003) & (data['latitude'] < 36.6781) & (data['longitude'] > -90.3131) & (data['longitude'] < -81.6469)]
+data = data[(data['latitude'] > 34.980322) & (data['latitude'] < 36.681860) & (data['longitude'] > -90.314831) & (data['longitude'] < -81.669813)]
+
+# data = data[(data['latitude'] > 33.980322) & (data['latitude'] < 35.681860) & (data['longitude'] >  -93.314831 ) & (data['longitude'] < -79.669813  )]
+#APPALACHIAN REGION
+# data = data[(data['latitude'] > 34) & (data['latitude'] < 37) & (data['longitude'] > -90) & (data['longitude'] < -82)]
 print(data)
-data.to_excel('../data/data.xlsx',index=False)
+
+# data.to_excel('../data/data.xlsx',index=False)
+
+engine = create_engine('mysql+mysqlconnector://root:ilab301@smartshots.ise.utk.edu:3306/DB', echo=False)
+
+
+
+
+
+
+data.to_sql(name='heatpoints', con=engine, if_exists ='replace', index=False)
+Session = sessionmaker(bind=engine)
+session = Session()
+session.execute(text('''TRUNCATE DB.heatpoints_optimized;'''))
+session.commit()
+
+
+session.execute(text('''INSERT INTO DB.heatpoints_optimized SELECT * FROM DB.heatpoints;'''))
+session.commit()
+session.close()
+
+# with engine.begin() as connection:
+#     connection.execute('INSERT INTO DB.heatpoints_optimized SELECT * FROM DB.heatpoints;')
+
+
+
+# with engine.connect() as con:
+#     statement = text("""
+
+# INSERT INTO heatpoints_optimized
+# SELECT * FROM heatpoints
+
+
+
+# """)
+#     con.execute(statement)
+
+
+
 
 exit(0)

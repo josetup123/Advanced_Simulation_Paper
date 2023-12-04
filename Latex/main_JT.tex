@@ -8,7 +8,7 @@
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
 \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
 
-\usepackage{graphicx,subcaption}
+\usepackage{graphicx}
 
 %\usepackage{supertabular}
 %\usepackage[sort&compress,round,comma,numbers]{natbib}
@@ -64,7 +64,7 @@
 
 \begin{document}
 \begin{frontmatter}
-\title{Enhancing Wildfire Detection: An Agent-Based Simulation Approach}
+\title{Digital Twins: A Simulation-Based and Multi-Objective Realtime Stochastic Approach for Fighting Wildfires}
 
 
 
@@ -229,14 +229,14 @@ Among other authors, \cite{phan_cooperative_2008} present a cooperation between 
 Latency - defined as time since satellite observation and the data being available in FIRMS:
 within 30-60 minutes for the continental US (CONUS), southern Canada and northern Mexico.
 
-The Landsat 8 & 9 Active Fire and Thermal Anomalies product, generated from the Landsat Operational Land Imager (OLI) shows active fire detections and thermal anomalies, such as volcanoes, and gas flares. The fire layer is useful for studying the spatial and temporal distribution of fire, to locate persistent hot spots such as volcanoes and gas flares, and to locate the source of air pollution from smoke that may have adverse human health impacts.
+The Landsat 8 and 9 Active Fire and Thermal Anomalies product, generated from the Landsat Operational Land Imager (OLI) shows active fire detections and thermal anomalies, such as volcanoes, and gas flares. The fire layer is useful for studying the spatial and temporal distribution of fire, to locate persistent hot spots such as volcanoes and gas flares, and to locate the source of air pollution from smoke that may have adverse human health impacts.
 
-Landsat OLI and its predecessors, the Landsat 4-5 Thematic Mapper (TM) and the Landsat 7 Enhanced Thematic Mapper Plus (ETM+), have provided multispectral observations and Earth science data products since 1982. The 30-m data provide spatially refined active fire detection data relative to MODIS and VIIRS (a 30-m pixel is approximately 0.001 of the area of a 1-km MODIS pixel and approximately 0.0625 of the area of a VIIRS 375-m pixel). The underlying fire layer algorithm and the spatial/spectral resolution of the sensor provide the ability to detect very small fires compared to MODIS, VIIRS and other relatively coarse spatial resolution sensors with relatively improved nighttime performance. Flaming fires as small as ∼4m2 and ∼1m2 have a greater than 50% probability of detection during daytime and nighttime observations, respectively. Consequently, Landsat active fire detection data can provide limited tactical scale data in support of fire management as well as other science applications requiring improved fire mapping fidelity.
+% Landsat OLI and its predecessors, the Landsat 4-5 Thematic Mapper (TM) and the Landsat 7 Enhanced Thematic Mapper Plus (ETM+), have provided multispectral observations and Earth science data products since 1982. The 30-m data provide spatially refined active fire detection data relative to MODIS and VIIRS (a 30-m pixel is approximately 0.001 of the area of a 1-km MODIS pixel and approximately 0.0625 of the area of a VIIRS 375-m pixel). The underlying fire layer algorithm and the spatial/spectral resolution of the sensor provide the ability to detect very small fires compared to MODIS, VIIRS and other relatively coarse spatial resolution sensors with relatively improved nighttime performance. Flaming fires as small as ∼4m2 and ∼1m2 have a greater than 50% probability of detection during daytime and nighttime observations, respectively. Consequently, Landsat active fire detection data can provide limited tactical scale data in support of fire management as well as other science applications requiring improved fire mapping fidelity.
 \subsubsection{VIIRS}
 \subsubsection{MODIS}
 
 % \subsubsection{IRWIN}
-https://firms.modaps.eosdis.nasa.gov/usfs/map/#m:tsd;d:2023-11-25..2023-11-26,2023-11-25;@-77.7,39.7,10.2z
+% https://firms.modaps.eosdis.nasa.gov/usfs/map/#m:tsd;d:2023-11-25..2023-11-26,2023-11-25;@-77.7,39.7,10.2z
 % ACTIVE WILDFIRE
 
 \subsection{Problem Modeling}
@@ -368,7 +368,7 @@ $lengths$                          & Fire intensity required   \\
 % \end{tabular}
 % \end{table}
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.65]{figs/Infograph.pdf}
 %\vspace{-10mm}
@@ -460,55 +460,100 @@ Internal caracteristics of the agents are considered within the agent-based simu
 %\end{equation}
 
 
-\begin{equation}
-\label{eq01}
-\min z =   \sum_{i,j} lengths_{i,j} *  x_{i,j}
-\end{equation}
+
+\section*{Model Formulation}
+
+\textbf{Sets:}
+\begin{align*}
+& \text{Locations: } \mathcal{L} \\
+& \text{Suppliers: } \mathcal{S}
+\end{align*}
+
+\textbf{Parameters:}
+\begin{align*}
+& \text{Cost matrix: } \text{cost\_matrix}_{ij} \quad \forall i, j \in \mathcal{L} \\
+& \text{Average demand: } \text{demand\_avg}_i \quad \forall i \in \mathcal{L} \\
+& \text{Demand standard deviation: } \text{demand\_std\_dev}_i \quad \forall i \in \mathcal{L} \\
+& M \quad \text{(A big-M constant)} \\
+& \alpha \quad \text{(Weighting factor for cost)} \\
+& \beta \quad \text{(Weighting factor for resource allocation)} \\
+& \text{Confidence level low: } \text{confidence\_level\_low} \\
+& \text{Confidence level high: } \text{confidence\_level\_high}
+\end{align*}
+
+\textbf{Decision Variables:}
+\begin{align*}
+& x_{ij} \quad \text{(Binary decision variable indicating if a route from location $i$ to $j$ is selected)} \quad \forall i, j \in \mathcal{L} \\
+& z_{is} \quad \text{(Binary decision variable indicating if supplier $s$ serves location $i$)} \quad \forall i \in \mathcal{L}, s \in \mathcal{S} \\
+& y_i \quad \text{(Continuous decision variable representing the resource allocation at location $i$)} \quad \forall i \in \mathcal{L}
+\end{align*}
+
+\textbf{Objective Function:}
+\begin{align*}
+\text{Minimize:} \quad & \alpha \sum_{i,j \in \mathcal{L}} \text{cost\_matrix}_{ij} \cdot x_{ij} - \beta \sum_{i \in \mathcal{L}} y_i
+\end{align*}
+
+\textbf{Constraints:}
+\begin{align*}
+& \text{Connectivity constraints:} \quad \sum_{j \in \mathcal{L}} x_{ij} = 1 \quad \forall i \in \mathcal{L} \\
+& \quad \sum_{i \in \mathcal{L}} x_{ij} = 1 \quad \forall j \in \mathcal{L} \\
+& \text{Supplier assignment constraints:} \quad \sum_{s \in \mathcal{S}} z_{is} \leq 1 \quad \forall i \in \mathcal{L} \\
+& \text{Resource allocation constraints:} \quad y_i \geq \text{demand\_avg}_i + M \sum_{j \in \mathcal{L}} x_{ij} \quad \forall i \in \mathcal{L} \\
+& \text{Stochastic demand constraints:} \quad y_i \geq \text{demand\_avg}_i - \text{demand\_std\_dev}_i \cdot \text{ppf}(1 - \text{confidence\_level\_low}) \quad \forall i \in \mathcal{L} \\
+& \quad y_i \leq \text{demand\_avg}_i + \text{demand\_std\_dev}_i \cdot \text{ppf}(1 - \text{confidence\_level\_high}) \quad \forall i \in \mathcal{L} \\
+& \text{Confidence level constraints:} \quad \text{cdf}\left(\frac{y_i - \text{demand\_avg}_i}{\text{demand\_std\_dev}_i}\right) \leq \text{confidence\_level\_low} \quad \forall i \in \mathcal{L} \\
+& \quad \text{cdf}\left(\frac{\text{demand\_avg}_i - y_i}{\text{demand\_std\_dev}_i}\right) \leq \text{confidence\_level\_high} \quad \forall i \in \mathcal{L}
+\end{align*}
+
+% \begin{equation}
+% \label{eq01}
+% \min z =   \sum_{i,j} lengths_{i,j} *  x_{i,j}
+% \end{equation}
 
 
 
-\begin{equation}
-\label{eq02}
-s.t. \sum_{j} x_{i,j} =1, \forall i \in dempoints
-\end{equation}
+% \begin{equation}
+% \label{eq02}
+% s.t. \sum_{j} x_{i,j} =1, \forall i \in dempoints
+% \end{equation}
 
 
-\begin{equation}
-  \label{eq02_2}
-  s.t. \sum_{j} x_{i,j} =1, \forall j \in dempoints
-  \end{equation}
+% \begin{equation}
+%   \label{eq02_2}
+%   s.t. \sum_{j} x_{i,j} =1, \forall j \in dempoints
+%   \end{equation}
   
   
 
 
-\begin{equation}
-\label{eq03}
-\sum_{i} x^{(depot,j)} =k  \forall j \in dempoints
-\end{equation}
+% \begin{equation}
+% \label{eq03}
+% \sum_{i} x^{(depot,j)} =k  \forall j \in dempoints
+% \end{equation}
 
 
 
-\begin{equation}
-\label{eq04}
-u_{i} =q_{i}  \forall  \in dempoints
-\end{equation}
+% \begin{equation}
+% \label{eq04}
+% u_{i} =q_{i}  \forall  \in dempoints
+% \end{equation}
 
 
-\begin{equation}
-  \label{eq05}
-  u_{i} =Q  \forall  i  \in dempoints
-  \end{equation}
+% \begin{equation}
+%   \label{eq05}
+%   u_{i} =Q  \forall  i  \in dempoints
+%   \end{equation}
 
-\begin{equation}
-\label{eq06}
-q_{depot} = 0 
-\end{equation}
+% \begin{equation}
+% \label{eq06}
+% q_{depot} = 0 
+% \end{equation}
 
 
-\begin{equation}
-  \label{eq07}
-   u_{i} - u_{j} + Q * x_{i,j}+ (Q-q_i-q_j) * x_{j,i}<= Q - q_{j} \forall  i,j  \in dempoints  j \not\in depot
-  \end{equation}
+% \begin{equation}
+%   \label{eq07}
+%    u_{i} - u_{j} + Q * x_{i,j}+ (Q-q_i-q_j) * x_{j,i}<= Q - q_{j} \forall  i,j  \in dempoints  j \not\in depot
+%   \end{equation}
 
 
 % /*
