@@ -51,7 +51,22 @@ def haversine(lat1, lon1, lat2, lon2):
 
 
 
-def main():
+def main()->None:
+
+
+
+    parser = argparse.ArgumentParser()
+
+
+    parser.add_argument("-factor_std",
+                        "--factor_std",
+                        help="factor_std",
+                        type=float)
+
+    args = parser.parse_args()
+
+
+    factor_std = float(args.factor_std)
 
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -184,18 +199,6 @@ def main():
 
 
 
-
-
-    ################################################
-
-
-
-
-
-
-
-
-
     # for row in data.iterrows():
     #     m.addVar('x')
 
@@ -220,7 +223,7 @@ def main():
 
     S = suppliers#[100, 150, 200]  # Supply capacities
     D_mean = locations#[80, 120, 150, 100]  # Mean demand
-    D_stddev = [random.randint(1, 20) for _ in range(len(locations))] #[10, 15, 20, 12]  # Standard deviation of demand
+    D_stddev = [random.randint(1, 5) for _ in range(len(locations))] #[10, 15, 20, 12]  # Standard deviation of demand
     combined_param = cost_matrix
     #[[11, 18, 21, 14], [36, 44, 51, 53], [54, 62, 69, 71]]  # Combined transportation cost and distance
 
@@ -235,11 +238,13 @@ def main():
         for j in range(num_demand_points):
             x[i, j] = model.addVar(vtype=GRB.CONTINUOUS,name=f"x_{names_firestations_optimized[i]}_{names_firepoints_optimized[j]}")
 
+
+    """THIS IS THE MINIMUN AND MAXIMUN SCENARIOS DESV STD"""
     # Random variables for stochastic demand
     D = {}
     for j in range(num_demand_points):
-        print()
-        D[j] = model.addVar(lb=D_mean[j] - 3 * D_stddev[j], ub=D_mean[j] + 3 * D_stddev[j], vtype=GRB.CONTINUOUS, name=f"D_{names_firepoints_optimized[j]}")#
+        # print()
+        D[j] = model.addVar(lb=D_mean[j] - factor_std * D_stddev[j], ub=D_mean[j] + factor_std * D_stddev[j], vtype=GRB.CONTINUOUS, name=f"D_{names_firepoints_optimized[j]}")#
 
 
     # Supply constraints
@@ -257,7 +262,7 @@ def main():
 
     # Optimize the model
     model.optimize()
-    model.printAttr('X')
+    # model.printAttr('X')
     print("printingh cost matrix")
     # print(combined_param)
     print(combined_param.shape)
