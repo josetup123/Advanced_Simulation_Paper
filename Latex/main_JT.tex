@@ -58,7 +58,7 @@
 \usepackage{float}
 \floatstyle{plaintop}
 \restylefloat{table}
-
+\usepackage[style=ieee,natbib]{natbib}
 
 \journal{journal Name}
 
@@ -126,12 +126,21 @@ MAVs, CVRP, Agent Based Simulation, Discrete Simulation, Wildfires
 \label{intro}
 
 Wildfires are one of the most expensive and deadly natural catastrophes in the world, particularly in the western United States. In 2018, a catastrophic wildfire known as the Camp Fire was recorded as one of the worst wildfires in the history of California. 
-Yet these catastrophic fires are expected increase by the year 2050 \cite{united_nations} if preventive actions are not taken nor improvement of response services are studied. These fire events are responsible of large-scale evacuation, homes being set on fire, infrastructure being destroyed, millions of hectares of forest resources damaged, and most critically, human lives being in danger.
-Fire detection and monitoring technologies have evidenced an rapid increase such as ground sensors, Unmaned Aerial Vehicle (UAVs), and satellite imagery have been deployed.
-Current systems have the following drawbacks which include delayed fire detection due to missing minor fires in the early stages, relatively high time lag for satellites to overhead the field, and inability to deploy sensors with restricted detecting distance ranges. For instance, a prompt response is desirable as they are likely to put off fire events on the early stages. It is demmed reponse times and proper resource allocation are key components for a prompt and adequated response.
+Yet these catastrophic fires are expected increase by the year 2050 \cite{united_nations} if preventive actions are not taken nor improvement of response services are studied. 
+These fire events are responsible of large-scale evacuation, homes being set on fire, infrastructure being destroyed, millions of hectares of forest resources damaged, and most critically, human lives being in danger.
+Fire detection and monitoring technologies have evidenced an rapid increase such as ground sensors, unmaned aerial vehicle (UAVs), and satellite imagery have been deployed.
+Current systems have drawbacks that include delayed fire detection due to missing minor fires in the early stages, relatively high time lag for satellites to overhead the 
+field and inability to deploy sensors with restricted detecting distance ranges. For instance, a prompt response and resource allocation is desirable as they are likely to conent the fire events on the early stages. 
+It is demmed reponse times and proper resource allocation are key components for an adequated response.
 % This study aims to capitalize on the potential of FPV lightweight micro-air vehicles (MAVs),  outfitted with advanced high-resolution cameras and an integrated communication system to proactively detect and monitor activities of interest (AOIs) in a busy metropolitan area." Our major goal is to create a network of aerial MAVs that is seamlessly integrated, establishing a dynamic mesh system. This novel technique answers the demand for effective and comprehensive metropolitan monitoring. We build a collaborative system in which MAVs may interact with one another, share information, and work together to cover a bigger area more effectively by joining these MAVs in a mesh network. We denote mesh system to the join work 
 % Fast detection of AOIs in the POIs located in certain geographical areas partitioned by quadrants is possible with FPV MAVs. We use cutting-edge Machine Learning techniques, notably computer vision algorithms, to allow autonomous AOI detection. These algorithms enable our MAVs to recognize and categorize AOIs autonomously, minimizing the need for user involvement and shortening reaction times. Each MAV in the mesh network is capable of transmitting to report AOIs to a centralized server using the embedded communication system, ensuring a dispersed and coordinated monitoring effort. Furthermore, we use evolutionary algorithms to improve MAV routing inside the mesh system, based on a multiple traveling salesman problem (mTSP) guaranteeing effective resource allocation and rapid reaction to discovered AOIs. This implies that the MAVs may alter their placements and routes dynamically to give optimal coverage and reaction times. Our research goes beyond the creation of hardware and algorithms, as well. We replicate and carefully examine the dispatch and service activities of emergency response teams using discrete event modeling. Our linked MAV mesh system's efficacy and operating dynamics are better understood as a result, and this highlights the system's importance for expediting emergency response operations and enhancing overall urban safety.
-On the basis of these we center our research effort on a proper allocation of resources and simulation of fire events course of action through the use of optimization based agent based simulation.
+On the basis of these we center our research effort on a prompt and proper allocation of resources and simulation of fire events during its curse of action. 
+
+% Defyining the problem:
+
+
+% tools to use
+Optimization based agent based simulation and deep reinforcement.
 This study aims to capitalize the use of the listed techniques to propose a practical framework for fire events hadling and resource allocaiton in the context of wildfires using a set of heterogeneous agents drones to provide adequate responses when human controllers are not available to initiate and guide the mission.
 
 
@@ -1131,10 +1140,9 @@ Internal caracteristics of the agents are considered within the agent-based simu
 
 
 
+\bibliographystyle{IEEEtran}
+\bibliography{IEEE/references.bib}
 
-\bibliographystyle{apalike}
-
-\bibliography{bib.bib}
 
 
 

@@ -63,7 +63,7 @@ def main():
 
     # --------- parameters -----------
 
-    EPISODES=500 #(FROM ANULOGIC)
+    EPISODES=2000 #(FROM ANULOGIC)
     DISCOUNT_FACTOR=1.0 #(FROM ANULOGIC)
 
     seed_value = 42 #(FROM ANYLIGIUC)

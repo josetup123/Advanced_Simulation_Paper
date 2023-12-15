@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex main_JT"] 0 "main_JT.aux" "main_JT.bbl" "main_JT" 0
-  "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "bib.bib" 1700995776 21086 5c5b7057c0651b85c663ec0b0385fe18 ""
-  "main_JT.aux" 0 -1 0 "pdflatex"
+["bibtex main_JT"] 1702595365 "main_JT.aux" "main_JT.bbl" "main_JT" 1702595365
+  "/usr/local/texlive/2022/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
+  "IEEE/references.bib" 0 -1 0 ""
+  "main_JT.aux" 1702595365 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
   (generated)
   "main_JT.bbl"
   "main_JT.blg"
-["pdflatex"] 1701499552 "/Users/user/Library/CloudStorage/GoogleDrive-jtupayac@vols.utk.edu/My Drive/Advanced_Simulation/Advanced_Simulation_Paper/Latex/main_JT.tex" "main_JT.pdf" "main_JT" 1701499552
-  "/Users/user/Library/CloudStorage/GoogleDrive-jtupayac@vols.utk.edu/My Drive/Advanced_Simulation/Advanced_Simulation_Paper/Latex/main_JT.tex" 1701499551 121590 69201d167c3fbd886220af43c4f710af ""
+["pdflatex"] 1702595365 "/Users/user/Library/CloudStorage/GoogleDrive-jtupayac@vols.utk.edu/My Drive/Advanced_Simulation/Advanced_Simulation_Paper/Latex/main_JT.tex" "main_JT.pdf" "main_JT" 1702595365
+  "/Users/user/Library/CloudStorage/GoogleDrive-jtupayac@vols.utk.edu/My Drive/Advanced_Simulation/Advanced_Simulation_Paper/Latex/main_JT.tex" 1702593216 121714 944344db4e29c65348afd079973524fe ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm0900.tfm" 1136768653 1536 c4f439db76ef96a9c53bc437f35ffe20 ""
@@ -180,11 +180,11 @@
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1674345714 2826445 aab4e57819c95b8dc455b03918b41ff5 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "figs/Infograph.pdf" 1700995802 269255 4da87cd12fc6bd965878129687cf14e3 ""
-  "main_JT.aux" 1701499552 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "main_JT.bbl" 1701499551 1228 1ecac2de4940b5c6342c660e1e82e310 "bibtex main_JT"
+  "main_JT.aux" 1702595365 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "main_JT.bbl" 1702593103 1228 1ecac2de4940b5c6342c660e1e82e310 "bibtex main_JT"
   "main_JT.out" 0 -1 0 "pdflatex"
   "main_JT.spl" 0 -1 0 "pdflatex"
-  "main_JT.tex" 1701499551 121590 69201d167c3fbd886220af43c4f710af ""
+  "main_JT.tex" 1702593216 121714 944344db4e29c65348afd079973524fe ""
   (generated)
   "main_JT.aux"
   "main_JT.log"

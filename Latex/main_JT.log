@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.21)  2 DEC 2023 01:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.21)  14 DEC 2023 18:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -668,7 +668,26 @@ LaTeX Info: Redefining \\ on input line 3056.
 \ULC@box=\box126
 Package: ulem 2019/11/18
 \ULdepth=\dimen280
-) (./main_JT.aux)
+)
+
+/Users/user/Library/CloudStorage/GoogleDrive-jtupayac@vols.utk.edu/My Drive/Advanced_Simulation/Advanced_Simulation_Paper/Latex/main_JT.tex:62: LaTeX Error: Option clash for package natbib.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 
+     
+The package natbib has already been loaded with options:
+  [round,authoryear]
+There has now been an attempt to load it with options
+  [style=ieee,natbib]
+Adding the global options:
+  round,authoryear,style=ieee,natbib
+to your \documentclass declaration may fix this.
+Try typing  <return>  to proceed.
+
+(./main_JT.aux)
 \openout1 = `main_JT.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
@@ -821,22 +840,22 @@ Overfull \hbox (2.43333pt too wide) has occurred while \output is active
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-Package natbib Warning: Citation `afghah_wildfire_2019' on page 2 undefined on input line 208.
+Package natbib Warning: Citation `afghah_wildfire_2019' on page 2 undefined on input line 217.
 
 
-Package natbib Warning: Citation `momeni_coordinated_2022' on page 2 undefined on input line 210.
+Package natbib Warning: Citation `momeni_coordinated_2022' on page 2 undefined on input line 219.
 
 
-Package natbib Warning: Citation `Ruetten' on page 2 undefined on input line 212.
+Package natbib Warning: Citation `Ruetten' on page 2 undefined on input line 221.
 
 
-Package natbib Warning: Citation `odonkor_distributed_2019' on page 2 undefined on input line 213.
+Package natbib Warning: Citation `odonkor_distributed_2019' on page 2 undefined on input line 222.
 
 
-Package natbib Warning: Citation `phan_cooperative_2008' on page 2 undefined on input line 214.
+Package natbib Warning: Citation `phan_cooperative_2008' on page 2 undefined on input line 223.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 258--267
+Underfull \hbox (badness 10000) in paragraph at lines 267--276
 
  []
 
@@ -844,10 +863,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 258--267
 <figs/Infograph.pdf, id=30, 559.76787pt x 308.12427pt>
 File: figs/Infograph.pdf Graphic file (type pdf)
 <use figs/Infograph.pdf>
-Package pdftex.def Info: figs/Infograph.pdf  used on input line 373.
+Package pdftex.def Info: figs/Infograph.pdf  used on input line 382.
 (pdftex.def)             Requested size: 363.8448pt x 200.2784pt.
  [4] [5 <./figs/Infograph.pdf>]
-Overfull \hbox (57.61757pt too wide) detected at line 506
+Overfull \hbox (57.61757pt too wide) detected at line 515
 []
  []
 
@@ -886,7 +905,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  70i,13n,79p,1760b,495s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main_JT.pdf (7 pages, 491640 bytes).
+Output written on main_JT.pdf (7 pages, 492105 bytes).
 PDF statistics:
  210 PDF objects out of 1000 (max. 8388607)
  120 compressed objects within 2 object streams
