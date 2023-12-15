@@ -447,6 +447,10 @@ INPUT ./figs/manager_critic_loss.png
 INPUT figs/manager_critic_loss.png
 INPUT ./figs/manager_critic_loss.png
 INPUT ./figs/manager_critic_loss.png
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT ./figs/manager_G.png
 INPUT ./figs/manager_G.png
 INPUT figs/manager_G.png
@@ -457,10 +461,6 @@ INPUT ./figs/4_2000.png
 INPUT figs/4_2000.png
 INPUT ./figs/4_2000.png
 INPUT ./figs/4_2000.png
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT ./fig1.jpeg
 INPUT ./fig1.jpeg
 INPUT fig1.jpeg
