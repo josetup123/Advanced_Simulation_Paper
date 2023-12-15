@@ -23,7 +23,7 @@ To use the framework, follow the instructions in the documentation provided in t
 ## Stage 1
 <div align="center">
   <a href="https://youtu.be/vVTLdvKKL_E">
-    <img src="https://img.youtube.com/vi/your-first-video-ID/0.jpg" alt="Wildfire Management Framework Overview" style="width:50%;">
+    <img  alt="Wildfire Management Framework Overview Stage 2" style="width:50%;">
   </a>
 </div>
 
@@ -31,7 +31,7 @@ To use the framework, follow the instructions in the documentation provided in t
 ## Stage 2
 <div align="center">
   <a href="https://www.youtube.com/watch?v=QCFEepq0dFw">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Icon_1_blue.svg/1200px-Icon_1_blue.svg" alt="Wildfire Management Framework Overview" style="width:50%;">
+    <img alt="Wildfire Management Framework Overview Stage 2" style="width:50%;">
   </a>
 </div>
 
@@ -43,6 +43,16 @@ Clone the repository to your local machine:
 git clone https://github.com/your-username/wildfire-management-digital-twin.git
 cd wildfire-management-digital-twin
 ```
+
+## Research Paper
+
+<!-- [get the PDF]({{ site.url }}Latex/main.pdf) -->
+
+https://drive.google.com/file/d/1lsHO2JNt7FeSHVg7-EQd4wqf2incnyRB/view?usp=sharing
+
+<!-- https://docs.google.com/viewer?url=1lsHO2JNt7FeSHVg7-EQd4wqf2incnyRB -->
+<!-- [embed]Latex/main.pdf[/embed] -->
+
 
 ## Additional Commands
 ```bash
