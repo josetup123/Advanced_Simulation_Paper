@@ -43,70 +43,42 @@ Wildfires, Deep Reinforcement Learning, Resource Allocation, Digital Twins, Real
 
 \section{Introduction}\label{introduction}
 \IEEEPARstart{W}{ildfires} are one of the most expensive and deadly natural catastrophes in the world, particularly in the western United States. 
-
 In 2018, a catastrophic wildfire known as the Camp Fire was recorded as one of the worst wildfires in the history of California. 
-Yet these catastrophic fires are expected increase by the year 2050 \cite{nations_as_nodate} if preventive actions are not taken nor improvement of response services are studied. These fire events are responsible of large-scale evacuation, homes being set on fire, 
+Yet these catastrophic fires are expected increase by the year 2050 [1] if preventive actions are not taken nor improvement of response services are studied. These fire events are responsible of large-scale evacuation, homes being set on fire, 
 infrastructure being destroyed, millions of hectares of forest resources damaged, and most critically, human lives being in danger.
-
-
-
 % BACKGROUND
 Wildfires impact populations differently communities marked by challenges—financial limitations, cultural and institutional obstacles, restricted mobility, and compromised physical health. 
 Consequently, these communities stand at a heightened risk of bearing a disproportionate burden when confronted with the catastrophic effects of wildfires. 
-
-
-
 Literature, extends that preventive measures are demeed effective are recommended under current
-research shows where wildfire mitigation can be highly cost effective
-\cite{Patrick Baylis} . In addition, 
-Although reducing hazards activities should be priorotized like as controlling wildland fuels and constructing houses and other structures to wildfire resistant requirements. 
+research shows where wildfire mitigation can be highly cost effective [3] . Although reducing hazards activities should be priorotized like as controlling wildland fuels and constructing houses and other structures to wildfire resistant requirements. 
 This is a significant and long-overdue shift from long-standing wildfire tactics that have virtually entirely focused on managing fire in wildlands.
 Federal reports such as "On Fire: The Report of the Wildland Fire Mitigation and Management Commission" elaborates a set of guidelines for wild fire control and prevention.
-
 % Tech
 Fire detection and monitoring technologies have evidenced an rapid increase such as ground sensors, unmaned aerial vehicle, and satellite imagery, among others.
-also, these technologies are paired with simulation based platforms such as 
 Current systems have the following drawbacks which include delayed fire detection due to missing minor fires in the early stages, 
-
-
-
 % Past events
-
 This enables community leaders to pinpoint locations where older housing may require retrofitting to enhance resistance against wildfires and customize outreach initiatives to engage nonresident landowners effectively.
-
-
-
-
 The relevance lies in understanding wildfire risk can assist communities in prioritizing preventative and mitigation efforts in order to target the most vulnerable individuals.
-Initiatives and data based tools like those developed for the USDA Forest Service Notes if a community is directly threatened by wildfire from adjacent combustible vegetation or indirectly threatened by embers.
-
-
+Initiatives and data based tools like those developed for the USDA Forest Service if a community is directly threatened by wildfire from adjacent combustible vegetation or indirectly threatened by embers.
 % Resource allocation and fire station locaiton!
 Wildfires are considered complex scenario when it comes to simulation and proper rource ahndling due to that these tend ti vary 
-
-
 % hurdles and motivation
-
-
 This research is motivated on the baisis of the complexity of resource allocation. As Wildfire containment involves the allocation of various resources, including firefighting personnel, equipment, and supplies. High complexity due to factors such as the dynamic nature of wildfires, varying terrain, and resource constraints
-is it possible to implement a wildfire containment policy that is suitable for best policy under high-complexity scenarios?
+This poses a rich environment for technologies paired with simulation based platforms such as deep reinformcement learning approaches to tackle effectively the decision making process in high complexity scenarios. 
+Research on simulators utilizing deep reinforcement learning for wildfire detection has primarily focused on firefighting strategies with limited emphasis on resource allocation and decision-making, despite the significant societal benefits. In a notable study [8], a decentralized deep reinforcement learning strategy is employed for a fleet of Unmanned Aerial Vehicles (UAVs) to autonomously combat forest fires. The authors opt for a deep RL approach due to the computational challenges of exact and approximate solutions using dynamic programming. Monte Carlo simulations demonstrate the superior performance of the deep RL policy compared to a manually crafted heuristic, showcasing adaptability to varying forest sizes, UAV quantities, and model parameter variations.
+
+In another study [7], deep reinforcement learning is applied to address complex conservation decision problems, providing a conceptual and technical introduction along with annotated code. The study showcases the effectiveness of deep RL in solving sequential decision-making challenges related to fisheries management and ecological tipping points.
+In our approach, parameterized experiments unfold across simulated scenarios using a digital twin. The twin operates in two stages: firstly, selecting fire stations based on their capacity, and then, clustered stations collaboratively engage in firefighting guided by the optimal policy determined by the deep reinforcement model. An allocation approach strategically assigns firefighting entities to neighboring areas, leveraging real-time data from satellite imaging and a routing engine for a coordinated and prompt response.
+Subsequently, the objective is to group selected stations into clusters and fire events, treating firefighting clusters as independent agents and fire events as dynamic environments influencing agent actions. Agents seek the optimal policy to minimize wildfire impact on the population. This holistic approach aims to synergize real-time data-driven resources into an effective and adaptive response system. The primary contributions of our work lie in these innovative approaches to resource allocation, decision-making, and firefighting strategy within the context of wildfire management.
 
 
-
-\section{Literature Review}\label{Literature Review}
-
-This literature review is covered in two section first we address the closest facility activation this allows firefightingh resources supplier to be activeluy aware of conditions that might let the second layer technique to be applied in the suystem. 
-
-
-
-
-Secondly, research in the use of simulators that base policies in deep reinformcement learning for wildfire detection 
-
-
-
-Parameterized experiments will unfold across a series of simulated scenarios. The digital twin operates in two stages: firstly, selecting fire stations based on their capacity, and then, the clustered stations collaboratively engage in firefighting, guided by the optimal policy determined by the deep reinforcement model. An allocation approach is employed to strategically assign firefighting entities to neighboring areas, leveraging resources indicated by the fire index of each station. This process harnesses real-time data derived from satellite imaging and a routing engine, facilitating a coordinated and prompt response.
-
-Following the resolution of the initial stage, our objective is to group the selected stations into clusters and fire events. Here, fire fighting clusters assume the role of independent agents, while fire events represent the dynamic environment influencing agent actions. Agents seek the optimal policy to minimize the impact of wildfires on the population. This holistic approach aims to synergize resources, driven by real-time data, into an effective and adaptive response system. The primary contributions of our work can be outlined as follows:
+% Research in the use of simulators that base policies in deep reinformcement learning for wildfire detection has been covered
+% with scarce enphasis in resource allocation and decision making, although paramountly benefits stand for society. 
+% In [8] authors Employ a decentralized deep reinforcement learning (RL) strategy for a group of Unmanned Aerial Vehicles (UAVs) to autonomously address forest fires. Due to the computational intractability of exact and approximate solutions using dynamic programming without agents, the paper opts for a deep RL approach. In this approach, each UAV develops a policy based on local information. Monte Carlo simulations illustrate that the deep RL policy outperforms a manually crafted heuristic and adapts well to various forest sizes, different UAV quantities, and variations in model parameters.
+% In [7] writers explore the application of deep reinforcement learning (RL) in addressing complex conservation decision problems, 
+% presenting a conceptual and technical introduction along with annotated code for researchers' adoption. Focusing on dynamic and uncertain environments, RL designs agents that interact with the surroundings, and deep RL integrates deep neural networks into these agents. The study demonstrates the effectiveness of deep RL in solving sequential decision-making challenges related to fisheries management and ecological tipping points.
+% Our approach will emplot parameterized experiments will unfold across a series of simulated scenarios. The digital twin operates in two stages: firstly, selecting fire stations based on their capacity, and then, the clustered stations collaboratively engage in firefighting, guided by the optimal policy determined by the deep reinforcement model. An allocation approach is employed to strategically assign firefighting entities to neighboring areas, leveraging resources indicated by the fire index of each station. This process harnesses real-time data derived from satellite imaging and a routing engine, facilitating a coordinated and prompt response.
+% Following the resolution of the initial stage, our objective is to group the selected stations into clusters and fire events. Here, fire fighting clusters assume the role of independent agents, while fire events represent the dynamic environment influencing agent actions. Agents seek the optimal policy to minimize the impact of wildfires on the population. This holistic approach aims to synergize resources, driven by real-time data, into an effective and adaptive response system. The primary contributions of our work can be outlined as follows:
 
 \begin{itemize}
     \item We introduce a digital twin framework for wildfire management with parameterized experiments to strategically allocate firefighting entities to neighboring areas based on a proposed fire station index.
@@ -150,6 +122,14 @@ critical challenge is the limited effectiveness of traditional strategies in rap
 Additionally, the lack of real-time decision support systems hampers the ability of firefighting teams to respond swiftly and effectively
 Develop an innovative solution that seamlessly integrates digital twins, simulation-based methodologies, and real-time deep reinforcement learning to address the shortcomings of existing wildfire management approaches. This solution aims to provide actionable insights, improve resource utilization, and minimize the environmental impact of firefighting operations, ultimately contributing to a more adaptive and proactive wildfire management paradigm
 
+% \subsection{Simulation}
+
+
+% For the simulation process we utilize four agents that represent: Heatpoints, these are entailed to generate the fire events and are created on the basis of  
+
+
+
+
 
 \section{Methodology}\label{Methodology}
 
@@ -174,15 +154,15 @@ The proposed stages rely on the structure and firestation allocation that will f
 
 \textbf{Decision Variables:}
 \begin{align}
-    & x_{ij} \quad \text{(Amount shipped from supplier $i$ to demand point $j$)}
+    & x_{ij} \quad \text{(Resources transported from fire station $i$ to fire event $j$)}
 \end{align}
 
 \textbf{Constraints:}
 \begin{align}
     & \text{Supply Constraints:} \\
-    & \quad \sum_{j} x_{ij} \leq S_i \quad \text{for each supplier $i$} \\
+    & \quad \sum_{j} x_{ij} \leq S_i \quad \text{for each fire station $i$} \\
     & \text{Demand Constraints:} \\
-    & \quad \sum_{i} x_{ij} = D_j \quad \text{for each demand point $j$}
+    & \quad \sum_{i} x_{ij} = D_j \quad \text{for each fire point point $j$}
 \end{align}
 
 \textbf{Objective Function:}
@@ -195,45 +175,74 @@ where $c_{ij}$ represents the transportation cost from supplier $i$ to demand po
 
 
 
-
-\subsection*{Advantage Actor-Critic (A2C)}
-
-The advantage actor-critic algorithm is a reinforcement learning technique that incorporates features of both policy gradient and value function approaches. A2C's mathematical formulation entails establishing the policy, value function, and objective function. The objective is to maximize this function with respect to the policy parameters  $\theta$ and the value function parameters  $\phi$.
-This mehtod is represented as follows:
-
-
-\begin{description}
-  \item[$\theta$:] Parameters of the policy function.
-  \item[$\phi$:] Parameters of the state-value function.
-  \item[$\pi(a|s;\theta)$:] Policy function representing the probability of taking action $a$ in state $s$ with parameters $\theta$.
-  \item[$R_t$:] Return at time $t$ (sum of discounted rewards over time).
-  \item[$\gamma$:] Discount factor.
-  \item[$A_t$:] Advantage function at time $t$, representing the advantage of taking action $a_t$ in state $s_t$.
-  \item[$V(s;\phi)$:] State-value function with parameters $\phi$.
-\end{description}
-% \begin{align}
-% &\theta \text{ : parameters of the policy function} \\
-% &\phi \text{ : parameters of the state-value function} \\
-% &\pi(a|s;\theta) \text{ : policy function representing the probability of taking action } a \text{ in state } s \text{ with parameters } \theta, \\
-% &R_t \text{ : return at time } t \text{ (sum of discounted rewards over time),} \\
-% &\gamma \text{ : discount factor,} \\
-% &A_t \text{ : advantage function at time } t \text{, representing the advantage of taking action } a_t \text{ in state } s_t, \\
-% &V(s;\phi) \text{ : state-value function with parameters } \phi.
-% \end{align}
-
-The A2C objective function is given by:\\
+\begin{figure*}[!t]
+  \normalsize % Adjust font size if necessary
+  \begin{description}
+    \item[$\theta$:] Parameters of the policy function.
+    \item[$\phi$:] Parameters of the state-value function.
+    \item[$\pi(a|s;\theta)$:] Policy function representing the probability of taking action $a$ in state $s$ with parameters $\theta$.
+    \item[$R_t$:] Return at time $t$ (sum of discounted rewards over time).
+    \item[$\gamma$:] Discount factor.
+    \item[$A_t$:] Advantage function at time $t$, representing the advantage of taking action $a_t$ in state $s_t$.
+    \item[$V(s;\phi)$:] State-value function with parameters $\phi$.
+  \end{description}
   
 
-\begin{multline}
-L(\theta, \phi) = \sum_{t=0}^{T} \left( \log \pi(a_t|s_t;\theta) \cdot A_t + \beta \cdot \text{H}(\pi(\cdot|s_t;\theta)) \right. \\
-\left. - \alpha \cdot \frac{1}{2} (V(s_t;\phi) - R_t)^2 \right),
-\end{multline}
-where:
-\begin{align}
-&\text{H}(\pi(\cdot|s_t;\theta)) \text{ is the entropy regularization term,} \\
-&\beta \text{ is the entropy regularization coefficient,} \\
-&\alpha \text{ is the coefficient for the value function loss.}
+
+  The A2C objective function is given by:
+
+
+  \begin{align}
+  &L(\theta, \phi) = \sum_{t=0}^{T} \left( \log \pi(a_t|s_t;\theta) \cdot A_t + \beta \cdot \text{H}(\pi(\cdot|s_t;\theta)) \right. \left. - \alpha \cdot \frac{1}{2} (V(s_t;\phi) - R_t)^2 \right)
 \end{align}
+
+
+  Where:
+
+  \begin{align}
+  &\text{H}(\pi(\cdot|s_t;\theta)) \text{ is the entropy regularization term,} \\
+  &\beta \text{ is the entropy regularization coefficient,} \\
+  &\alpha \text{ is the coefficient for the value function loss.}
+  \end{align}
+  \end{figure*}
+% \subsection*{Advantage Actor-Critic (A2C)}
+
+% The advantage actor-critic algorithm is a reinforcement learning technique that incorporates features of both policy gradient and value function approaches. A2C's mathematical formulation entails establishing the policy, value function, and objective function. The objective is to maximize this function with respect to the policy parameters  $\theta$ and the value function parameters  $\phi$.
+% This mehtod is represented as follows:
+
+
+% \begin{description}
+%   \item[$\theta$:] Parameters of the policy function.
+%   \item[$\phi$:] Parameters of the state-value function.
+%   \item[$\pi(a|s;\theta)$:] Policy function representing the probability of taking action $a$ in state $s$ with parameters $\theta$.
+%   \item[$R_t$:] Return at time $t$ (sum of discounted rewards over time).
+%   \item[$\gamma$:] Discount factor.
+%   \item[$A_t$:] Advantage function at time $t$, representing the advantage of taking action $a_t$ in state $s_t$.
+%   \item[$V(s;\phi)$:] State-value function with parameters $\phi$.
+% \end{description}
+% % \begin{align}
+% % &\theta \text{ : parameters of the policy function} \\
+% % &\phi \text{ : parameters of the state-value function} \\
+% % &\pi(a|s;\theta) \text{ : policy function representing the probability of taking action } a \text{ in state } s \text{ with parameters } \theta, \\
+% % &R_t \text{ : return at time } t \text{ (sum of discounted rewards over time),} \\
+% % &\gamma \text{ : discount factor,} \\
+% % &A_t \text{ : advantage function at time } t \text{, representing the advantage of taking action } a_t \text{ in state } s_t, \\
+% % &V(s;\phi) \text{ : state-value function with parameters } \phi.
+% % \end{align}
+
+% The A2C objective function is given by:\\
+  
+
+% \begin{multline}
+% L(\theta, \phi) = \sum_{t=0}^{T} \left( \log \pi(a_t|s_t;\theta) \cdot A_t + \beta \cdot \text{H}(\pi(\cdot|s_t;\theta)) \right. \\
+% \left. - \alpha \cdot \frac{1}{2} (V(s_t;\phi) - R_t)^2 \right),
+% \end{multline}
+% where:
+% \begin{align}
+% &\text{H}(\pi(\cdot|s_t;\theta)) \text{ is the entropy regularization term,} \\
+% &\beta \text{ is the entropy regularization coefficient,} \\
+% &\alpha \text{ is the coefficient for the value function loss.}
+% \end{align}
 
 
 
@@ -252,80 +261,101 @@ The determination of neighboring fire stations is derived through the following 
 
 
 
+% \begin{figure*}[!t]
 
+% \textbf{Sets:}
 
-\textbf{Sets:}
-\begin{description}
-  \item[$S$:] Suppliers
-  \item[$D_{\text{mean}}$:] Locations (mean demand)
-  \item[$D_{\text{stddev}}$:] Standard deviations for demand
-  \item[\texttt{combined\_param}:] Cost matrix
-\end{description}
+% \begin{description}
+%   \item[$S$:] Suppliers
+%   \item[$D_{\text{mean}}:$] Locations (mean demand)
+%   \item[$D_{\text{stddev}}:$] Standard deviations for demand
+%   \item[\texttt{combined\_param}:] Cost matrix
+% \end{description}
 
-\textbf{Parameters:}
-\begin{description}
-  \item[\texttt{num\_suppliers}:] Number of suppliers
-  \item[\texttt{num\_demand\_points}:] Number of demand points
-\end{description}
+% \textbf{Parameters:}
+% \begin{description}
+%   \item[\texttt{num\_suppliers}:] Number of suppliers
+%   \item[\texttt{num\_demand\_points}:] Number of demand points
+% \end{description}
 
-\textbf{Constraints:}
-\begin{description}
-  \item[Supply Constraints:] $\sum_{j} x[i, j] \leq S[i]$ for each supplier $i$
-  \item[Demand Constraints:] $\sum_{i} x[i, j] = D[j]$ for each demand point $j$
-\end{description}
+% \textbf{Constraints:}
+% \begin{description}
+%   \item[Supply Constraints:] $\sum_{j} x[i, j] \leq S[i]$ for each supplier $i$
+%   \item[Demand Constraints:] $\sum_{i} x[i, j] = D[j]$ for each demand point $j$
+% \end{description}
 
-\textbf{Objective Function:}
-\begin{equation}
-    \text{Minimize } \sum_{i,j} \text{combined\_param}[i][j] \times x[i, j]
-\end{equation}
-
+% \textbf{Objective Function:}
+% \begin{equation}
+%     \text{Minimize } \sum_{i,j} \text{combined\_param}[i][j] \times x[i, j]
+% \end{equation}
+% \end{figure*}
 
 
 
 
 \subsection{Fire Containment}\label{Fire Containment}
 
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[height=5.5cm,width=8cm]{figs/parameters.png}
-  \caption{Deep Reinformcement Leanring Parameters: The experimental parameters are configured as follows: \texttt{EPISODES=50000} dictates the number of agent simulations for policy improvement; \texttt{DISCOUNT\_FACTOR=1.0} emphasizes the full consideration of future rewards; \texttt{seed\_value = 42} ensures reproducibility through a set seed for the random number generator. \texttt{num\_states = Max\_FirePoints} signifies the count of environmental states, often representing diverse fire scenarios or locations. \texttt{num\_plans = 2} denotes the available action choices for the firefighter, likely relating to deciding whether to address a fire. \texttt{T = 20} defines the time horizon, indicating the number of time steps before updating policies or the simulation duration. \texttt{success\_pr = [0.0, 0.5, 0.9]} characterizes the success probability of extinguishing a fire, with values indicating varying success levels. The \texttt{degrade\_pr} matrix portrays degradation probabilities for each state, reflecting the likelihood of environmental deterioration. \texttt{C\_r = 10} denotes the reward for fire prevention per time step, incentivizing a safe environment. \texttt{C\_o} encapsulates operating costs, suggesting state-dependent variations. \texttt{C\_m} captures maintenance costs, contingent on the chosen action, likely reflecting the expenses associated with fire suppression strategies. }
+  \includegraphics[height=5cm,width=8cm]{figs/parameters.png}
+  \caption{Deep Reinformcement Leanring Parameters: The experimental parameters are configured as follows: \texttt{EPISODES=50000} dictates the number of agent simulations for policy improvement; \texttt{DISCOUNT\_FACTOR=1.0} emphasizes the full consideration of future rewards; \texttt{seed\_value = 42} ensures reproducibility through a set seed for the random number generator. \texttt{num\_states = Max\_FirePoints} signifies the count of environmental states, often representing diverse fire scenarios or locations. \texttt{num\_plans = 2} denotes the available action choices for the firefighter, likely relating to deciding whether to address a fire. \texttt{T = 20} defines the time horizon, indicating the number of time steps before updating policies or the simulation duration. \texttt{success\_pr = [0.0, 0.5, 0.9]} characterizes the success probability of extinguishing a fire, with values indicating varying success levels. The \texttt{degrade\_pr} matrix portrays degradation probabilities for each state, reflecting the likelihood of environmental deterioration. \texttt{C\_reward = 10} denotes the reward for fire prevention per time step, incentivizing a safe environment. \texttt{C\_Operating} encapsulates operating costs, suggesting state-dependent variations. \texttt{C\_Putoff} captures put off costs, contingent on the chosen action, likely reflecting the expenses associated with fire suppression strategies. }
 \end{figure}
 
 
 
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics[height=4cm,width=9.5cm]{figs/stages.png}
-  \caption{Stages Transfering: We illustrate the intricate process of transitioning from the initial stage to the subsequent deep reinforcement learning (DRL) model in a two-stage framework. Initially, our Neighboring approach strategically allocates the requisite number of fire stations to address the prevailing number of fire events in a given area. The fire stations surrounding each fire event are then clustered, constituting Stage two. In this stage, the individual fire stations and associated resources are treated as a unified entity. The DRL approach subsequently formulates a policy, determining the optimal actions for each fire event—whether to contain, extinguish, or withhold resource allocation—at discrete time intervals, starting at $t=0$. Visualized through three arrows, these actions represent the various states the agent (comprising a cluster of fire stations and resources) can assume during the second stage. Our temporal horizon spans 20 time steps, with each step equivalent to an hour in Anylogic units, providing a comprehensive representation of the evolving dynamics.}\end{figure}
+  \caption{Stages Transfering: We illustrate the process of transitioning from the initial stage to the subsequent deep reinforcement learning (DRL) model in a two-stage framework. Initially, our Neighboring approach strategically allocates the requisite number of fire stations to address the prevailing number of fire events in a given area. The fire stations surrounding each fire event are then clustered, constituting Stage two. In this stage, the individual fire stations and associated resources are treated as a unified entity. The DRL approach subsequently formulates a policy, determining the optimal actions for each fire event—whether to contain, extinguish, or withhold resource allocation—at discrete time intervals, starting at $t=0$. Visualized through three arrows, these actions represent the various states the agent (comprising a cluster of fire stations and resources) can assume during the second stage. Our temporal horizon spans 20 time steps, with each step equivalent to an hour in Anylogic units, providing a comprehensive representation of the evolving dynamics.}\end{figure}
 
 
-  \begin{figure}[H]
-    \centering
-    \includegraphics[height=4cm,width=9.5cm]{figs/manager_actor_loss.png}
-    \caption{Actor Loss: It indicates the cost of training the policy network. The actor loss leads policy modification to raise the likelihood of actions leading to better returns and decrease the likelihood of actions leading to lower returns. It is a component of the overall loss function, which combines actor and critic losses with the goal of maximizing the predicted cumulative reward by changing both the policy and value functions. }\end{figure}
+\begin{figure}
+\centering
+\includegraphics[height=4cm,width=8cm]{figs/manager_actor_loss.png}
+\caption{Actor Loss: It indicates the cost of training the policy network. The actor loss leads policy modification to raise the likelihood of actions leading to better returns and decrease the likelihood of actions leading to lower returns. It is a component of the overall loss function, which combines actor and critic losses with the goal of maximizing the predicted cumulative reward by changing both the policy and value functions. }\end{figure}
+
   
-  
 
-    \begin{figure}[H]
-      \centering
-      \includegraphics[height=4cm,width=9.5cm]{figs/manager_critic_loss.png}
-      \caption{Stages Transfering: We illustrate the intricate process of transitioning from the initial stage to the subsequent deep reinforcement learning (DRL) model in a two-stage framework. Initially, our Neighboring approach strategically allocates the requisite number of fire stations to address the prevailing number of fire events in a given area. The fire stations surrounding each fire event are then clustered, constituting Stage two. In this stage, the individual fire stations and associated resources are treated as a unified entity. The DRL approach subsequently formulates a policy, determining the optimal actions for each fire event—whether to contain, extinguish, or withhold resource allocation—at discrete time intervals, starting at $t=0$. Visualized through three arrows, these actions represent the various states the agent (comprising a cluster of fire stations and resources) can assume during the second stage. Our temporal horizon spans 20 time steps, with each step equivalent to an hour in Anylogic units, providing a comprehensive representation of the evolving dynamics.}\end{figure}
+\begin{figure}
+\centering
+\includegraphics[height=4cm,width=8cm]{figs/manager_critic_loss.png}
+\caption{Critic Loss: In Advantage Actor-Critic (A2C), the critic loss indicates the difference between the projected state value and the actual return seen during reinforcement learning training. The critic is in charge of estimating the state-value function, which calculates the predicted cumulative reward from a particular condition in A2C. The critic loss, which is frequently expressed as the mean squared error between the anticipated state value and the actual return, is a measure of how well the critic's predictions match the genuine rewards received in the environment.}\end{figure}
     
     
-    
-      \begin{figure}[H]
+      \begin{figure}
         \centering
-        \includegraphics[height=4cm,width=9.5cm]{figs/manager_G.png}
-        \caption{Stages Transfering: We illustrate the intricate process of transitioning from the initial stage to the subsequent deep reinforcement learning (DRL) model in a two-stage framework. Initially, our Neighboring approach strategically allocates the requisite number of fire stations to address the prevailing number of fire events in a given area. The fire stations surrounding each fire event are then clustered, constituting Stage two. In this stage, the individual fire stations and associated resources are treated as a unified entity. The DRL approach subsequently formulates a policy, determining the optimal actions for each fire event—whether to contain, extinguish, or withhold resource allocation—at discrete time intervals, starting at $t=0$. Visualized through three arrows, these actions represent the various states the agent (comprising a cluster of fire stations and resources) can assume during the second stage. Our temporal horizon spans 20 time steps, with each step equivalent to an hour in Anylogic units, providing a comprehensive representation of the evolving dynamics.}\end{figure}
+        \includegraphics[height=4cm,width=8cm]{figs/manager_G.png}
+        \caption{This section elucidates the profound impact of actions on the overarching policy return. A well-converged model is anticipated to showcase a discernibly smoother pattern, contrasting with the inherent noise observed during earlier stages. The graphical representation serves to illustrate the pivotal role actions play in shaping the cumulative return of the policy, offering insights into the stability and effectiveness achieved through convergence.}\end{figure}
       
       
-        \begin{figure}[H]
+        \begin{figure}
           \centering
-          \includegraphics[height=5cm,width=6cm]{figs/4_2000.png}
-          \caption{Stages Transfering: We illustrate the intricate process of transitioning from the initial stage to the subsequent deep reinforcement learning (DRL) model in a two-stage framework. Initially, our Neighboring approach strategically allocates the requisite number of fire stations to address the prevailing number of fire events in a given area. The fire stations surrounding each fire event are then clustered, constituting Stage two. In this stage, the individual fire stations and associated resources are treated as a unified entity. The DRL approach subsequently formulates a policy, determining the optimal actions for each fire event—whether to contain, extinguish, or withhold resource allocation—at discrete time intervals, starting at $t=0$. Visualized through three arrows, these actions represent the various states the agent (comprising a cluster of fire stations and resources) can assume during the second stage. Our temporal horizon spans 20 time steps, with each step equivalent to an hour in Anylogic units, providing a comprehensive representation of the evolving dynamics.}\end{figure}
+          \includegraphics[height=5cm,width=5cm]{figs/4_2000.png}
+          \caption{Action Schema: This comprehensive depiction provides a detailed examination of state rewards, actions, and individual states. To navigate the intricacies of the data, it is advisable to implement a state-action filter to prevent unnecessary traversal through events where fires have already been extinguished. Notably, an observable pattern emerges, highlighting the effective control measures applied to fire event 3, also denoted as state 3, which demonstrate a successful containment strategy deployed multiple times.}\end{figure}
         
         
       
+
+          \begin{table}
+            \centering
+            \caption{This table represents the results of various test events conducted to assess system performance. Five distinct tests were executed, systematically increasing the number of fire events to evaluate their impact on the overall system return. Notably, our analysis focused on a carefully selected cluster of data points.
+            For this specific cluster, it became evident that exceeding eight fire events would likely surpass the capacity of the fire points cluster, inevitably leading to repercussions on the population. It is crucial to emphasize that the policies implemented during these tests are still in the developmental phase. Ongoing efforts are directed towards further refinement and completion in the subsequent stages of this research.
+            These findings underscore the need for cautious consideration and ongoing optimization as we progress in the development of robust policies for managing fire events.
+            }
+            
+            
+            \begin{tabular}{|c|c|c|}
+              \hline
+              \textbf{Test} & \textbf{Fire Events} & \textbf{Return} \\
+              \hline
+              1 & 4 & 156 \\
+              2 & 8 & 97 \\
+              3 & 80 & -961 \\
+              4 & 100 & -1224 \\
+              5 & 800 & -11465 \\
+              \hline
+              \end{tabular}
+          \end{table}
 
 
 
@@ -836,8 +866,8 @@ The incorporation of real-time data from satellite imaging and a routing engine 
 
 
 
-\bibliographystyle{IEEEtran}
-\bibliography{IEEE/references.bib}
+% \bibliographystyle{IEEEtran}
+% \bibliography{references.bib}
 
 
 
@@ -871,6 +901,20 @@ The incorporation of real-time data from satellite imaging and a routing engine 
 % \bibitem{ref9}
 % R. Ortega, A. Astolfi, G. Bastin, and H. Rodriguez, ``Stabilization of food-chain systems using a port-controlled Hamiltonian description,'' in \textit{Proc. Amer. Control Conf.}, Chicago, IL, USA,
 % 2000, pp. 2245--2249.
+
+[1]U. Nations, “As Wildfires Increase, Integrated Strategies for Forests, Climate and Sustainability Are Ever More Urgent.” https://www.un.org/en/un-chronicle/wildfires-increase-integrated-strategies-forests-climate-and-sustainability-are-ever-0 (accessed Oct. 19, 2023).
+
+[2]“Wilfire Risk To Communities.” https://wildfirerisk.org/ (accessed Dec. 14, 2023). 
+
+[3]P. Baylis and J. Boomhower, “The Economic Incidence of Wildfire Suppression in the United States,” American Economic Journal: Applied Economics, vol. 15, no. 1, pp. 442–473, Jan. 2023, doi: 10.1257/app.20200662. 
+
+[4]K. B. Ph.D, “Wildfires destroy thousands of structures each year,” Nov. 16, 2020. https://headwaterseconomics.org/natural-hazards/structures-destroyed-by-wildfire/ (accessed Dec. 14, 2023).
+
+[6]G. H. Donovan and D. B. Rideout, “An Integer Programming Model to Optimize Resource Allocation for Wildfire Containment,” Forest Science, vol. 49, no. 2, pp. 331–335, Apr. 2003, doi: 10.1093/forestscience/49.2.331. 
+
+[7]“Deep reinforcement learning for conservation decisions - Lapeyrolerie - 2022 - Methods in Ecology and Evolution - Wiley Online Library.” https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13954 (accessed Dec. 15, 2023). 
+
+[8]R. N. Haksar and M. Schwager, “Distributed Deep Reinforcement Learning for Fighting Forest Fires with a Network of Aerial Robots,” in 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Oct. 2018, pp. 1067–1074. doi: 10.1109/IROS.2018.8593539.
 
 % \end{thebibliography}
 

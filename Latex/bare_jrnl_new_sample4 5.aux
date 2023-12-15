@@ -1,0 +1,25 @@
+\relax 
+\citation{nations_as_nodate}
+\citation{Patrick Baylis}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}\protected@file@percent }
+\newlabel{introduction}{{I}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Literature Review}{1}{}\protected@file@percent }
+\newlabel{Literature Review}{{II}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Architecture and Information Collection}{2}{}\protected@file@percent }
+\newlabel{Architecture and Information Collection}{{III}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Problem Description}{2}{}\protected@file@percent }
+\newlabel{Problem Description}{{IV}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Stage 1}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Stage 2}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Methodology}{2}{}\protected@file@percent }
+\newlabel{Methodology}{{V}{2}}
+\newlabel{Pseudo Heuristic - Optimization Approach}{{V}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  System Architecture: The illustration depicts the fundamental components of this digital twin. Initially, satellite imaging is employed from three sources—Landsat, MODIS, and VIIRS. Each dataset is standardized, offering a confidence level for the likelihood of a fire event at each represented heat point in the future. This data is presented in tabular format and forms the basis for the backend, comprising a Django-based API and a containerized MySQL platform. The API operates as a RESTful interface for socket communication and serves as an executor of operations within the inner backend. Real-time traffic information is sourced from TomTom live data, communicating with the OSRM routing engine to generate a realistic cost matrix for transportation in optimizing neighboring station placement. Following optimization, the results are visualized in the AnyLogic GUI. The second stage involves a reinforcement learning-based policy aiming to select the policy that minimizes the economic impact caused by a fire event. An advantage actor-critic is utilized to train independent clusters for each agent, empowering them to decide on the necessary containment actions for fire events. }}{3}{}\protected@file@percent }
+\newlabel{fig:arch}{{1}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Experimentation}{3}{}\protected@file@percent }
+\newlabel{Experimentation}{{VI}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Data Sources}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Neighboring Station}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-C}}Fire Containment}{4}{}\protected@file@percent }
+\newlabel{Fire Containment}{{\mbox  {VI-C}}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Deep Reinformcement Leanring Parameters: The experimental parameters are configured as follows: \texttt  {EPISODES=50000} dictates the number of agent simulations for policy improvement; \texttt  {DISCOUNT\_FACTOR=1.0} emphasizes the full consideration of future rewards; \texttt  {seed\_value = 42} ensures reproducibility through a set seed for the random number generator. \texttt  {num\_states = Max\_FirePoints} signifies the count of environmental states, often representing diverse fire scenarios or locations. \texttt  {num\_plans = 2} denotes the available action choices for the firefighter, likely relating to deciding whether to address a fire. \texttt  {T = 20} defines the time horizon, indicating the number of time steps before updating policies or the simulation duration. \texttt  {success\_pr = [0.0, 0.5, 0.9]} characterizes the success probability of extinguishing a fire, with values indicating varying success levels. The \texttt  {degrade\_pr} matrix portrays degradation probabilities for each state, reflecting the likelihood of environmental de

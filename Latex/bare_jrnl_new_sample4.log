@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.21)  15 DEC 2023 00:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.21)  15 DEC 2023 04:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -310,26 +310,15 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-
-LaTeX Warning: Citation `nations_as_nodate' on page 1 undefined on input line 48.
-
-
-Underfull \hbox (badness 6125) in paragraph at lines 54--56
-[]\OT1/ptm/m/n/10 Wildfires im-pact pop-u-la-tions dif-fer-ently com-mu-ni-ties
- []
-
-
-LaTeX Warning: Citation `Patrick Baylis' on page 1 undefined on input line 61.
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 99.
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 99.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 69.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
@@ -339,112 +328,132 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 <figs/Arch.png, id=10, 986.68625pt x 497.86pt>
 File: figs/Arch.png Graphic file (type png)
 <use figs/Arch.png>
-Package pdftex.def Info: figs/Arch.png  used on input line 135.
+Package pdftex.def Info: figs/Arch.png  used on input line 107.
 (pdftex.def)             Requested size: 341.43091pt x 170.72113pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
+Overfull \hbox (4.9519pt too wide) detected at line 158
+[]
  []
 
-[3 <./figs/Arch.png>]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 262.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
+[2] [3 <./figs/Arch.png>]
 <figs/parameters.png, id=26, 857.2025pt x 380.42125pt>
 File: figs/parameters.png Graphic file (type png)
 <use figs/parameters.png>
-Package pdftex.def Info: figs/parameters.png  used on input line 290.
-(pdftex.def)             Requested size: 227.61537pt x 156.49033pt.
+Package pdftex.def Info: figs/parameters.png  used on input line 300.
+(pdftex.def)             Requested size: 227.61537pt x 142.26869pt.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 301.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
 <figs/stages.png, id=27, 941.5175pt x 392.46625pt>
 File: figs/stages.png Graphic file (type png)
 <use figs/stages.png>
-Package pdftex.def Info: figs/stages.png  used on input line 298.
+Package pdftex.def Info: figs/stages.png  used on input line 308.
 (pdftex.def)             Requested size: 270.30347pt x 113.8063pt.
 
-Overfull \hbox (18.30347pt too wide) in paragraph at lines 298--299
+Overfull \hbox (18.30347pt too wide) in paragraph at lines 308--309
  [][] 
  []
-
-
-Underfull \vbox (badness 6284) has occurred while \output is active []
 
 <figs/manager_actor_loss.png, id=28, 578.16pt x 433.62pt>
 File: figs/manager_actor_loss.png Graphic file (type png)
 <use figs/manager_actor_loss.png>
-Package pdftex.def Info: figs/manager_actor_loss.png  used on input line 304.
-(pdftex.def)             Requested size: 270.29724pt x 113.81041pt.
-
-Overfull \hbox (18.29724pt too wide) in paragraph at lines 304--305
- [][] 
- []
-
+Package pdftex.def Info: figs/manager_actor_loss.png  used on input line 314.
+(pdftex.def)             Requested size: 227.61641pt x 113.81041pt.
 <figs/manager_critic_loss.png, id=29, 578.16pt x 433.62pt>
 File: figs/manager_critic_loss.png Graphic file (type png)
 <use figs/manager_critic_loss.png>
-Package pdftex.def Info: figs/manager_critic_loss.png  used on input line 311.
-(pdftex.def)             Requested size: 270.29724pt x 113.81041pt.
-
-Overfull \hbox (18.29724pt too wide) in paragraph at lines 311--312
- [][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <./figs/parameters.png> <./figs/stages.png> <./figs/manager_actor_loss.png>]
-<figs/manager_G.png, id=39, 578.16pt x 433.62pt>
+Package pdftex.def Info: figs/manager_critic_loss.png  used on input line 321.
+(pdftex.def)             Requested size: 227.61641pt x 113.81041pt.
+<figs/manager_G.png, id=30, 578.16pt x 433.62pt>
 File: figs/manager_G.png Graphic file (type png)
 <use figs/manager_G.png>
-Package pdftex.def Info: figs/manager_G.png  used on input line 318.
-(pdftex.def)             Requested size: 270.29724pt x 113.81041pt.
-
-Overfull \hbox (18.29724pt too wide) in paragraph at lines 318--319
- [][] 
- []
-
-<figs/4_2000.png, id=40, 348.30125pt x 399.4925pt>
+Package pdftex.def Info: figs/manager_G.png  used on input line 327.
+(pdftex.def)             Requested size: 227.61641pt x 113.81041pt.
+<figs/4_2000.png, id=31, 348.30125pt x 399.4925pt>
 File: figs/4_2000.png Graphic file (type png)
 <use figs/4_2000.png>
-Package pdftex.def Info: figs/4_2000.png  used on input line 324.
-(pdftex.def)             Requested size: 170.71693pt x 142.26277pt.
+Package pdftex.def Info: figs/4_2000.png  used on input line 333.
+(pdftex.def)             Requested size: 142.26234pt x 142.26277pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [4 <./figs/parameters.png> <./figs/stages.png> <./figs/manager_actor_loss.png> <./figs/manager_critic_loss.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 905--906
+\OT1/ptm/m/n/10 https://www.un.org/en/un-chronicle/wildfires-increase-
+ []
 
-No file bare_jrnl_new_sample4.bbl.
-[5 <./figs/manager_critic_loss.png> <./figs/manager_G.png> <./figs/4_2000.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 905--906
+\OT1/ptm/m/n/10 integrated-strategies-forests-climate-and-sustainability-are-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 911--912
+[]\OT1/ptm/m/n/10 [4]K. B. Ph.D, \Wild-fires de-stroy thou-sands
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 911--912
+\OT1/ptm/m/n/10 of struc-tures each year," Nov. 16, 2020.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 911--912
+\OT1/ptm/m/n/10 https://headwaterseconomics.org/natural-hazards/structures-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 915--916
+[]\OT1/ptm/m/n/10 [7]\Deep re-in-force-ment learn-ing for con-ser-va-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 915--916
+\OT1/ptm/m/n/10 de-ci-sions - Lapey-ro-lerie - 2022 - Meth-ods in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 915--916
+\OT1/ptm/m/n/10 Ecol-ogy and Evo-lu-tion - Wi-ley On-line Li-brary."
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 915--916
+\OT1/ptm/m/n/10 https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-
+ []
+
+[5 <./figs/manager_G.png> <./figs/4_2000.png>]
 <fig1.jpeg, id=47, 89.352pt x 111.69pt>
 File: fig1.jpeg Graphic file (type jpg)
 <use fig1.jpeg>
-Package pdftex.def Info: fig1.jpeg  used on input line 891.
+Package pdftex.def Info: fig1.jpeg  used on input line 935.
 (pdftex.def)             Requested size: 72.26973pt x 90.33716pt.
 File: fig1.jpeg Graphic file (type jpg)
 <use fig1.jpeg>
-Package pdftex.def Info: fig1.jpeg  used on input line 891.
+Package pdftex.def Info: fig1.jpeg  used on input line 935.
 (pdftex.def)             Requested size: 72.26973pt x 90.33716pt.
  [6
 
- <./fig1.jpeg>] (./bare_jrnl_new_sample4.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+ <./fig1.jpeg>] (./bare_jrnl_new_sample4.aux) ) 
 Here is how much of TeX's memory you used:
- 4734 strings out of 478268
- 83747 string characters out of 5846347
- 389640 words of memory out of 5000000
- 22864 multiletter control sequences out of 15000+600000
- 512420 words of font info for 109 fonts, out of 8000000 for 9000
+ 4728 strings out of 478268
+ 83631 string characters out of 5846347
+ 395502 words of memory out of 5000000
+ 22859 multiletter control sequences out of 15000+600000
+ 513629 words of font info for 109 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 55i,13n,63p,1713b,332s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,13n,63p,1727b,334s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl_new_sample4.pdf (6 pages, 4197281 bytes).
+Output written on bare_jrnl_new_sample4.pdf (6 pages, 4198516 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream

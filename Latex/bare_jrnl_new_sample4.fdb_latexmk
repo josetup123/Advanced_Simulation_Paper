@@ -1,13 +1,6 @@
 # Fdb version 3
-["bibtex bare_jrnl_new_sample4"] 1702619210 "bare_jrnl_new_sample4.aux" "bare_jrnl_new_sample4.bbl" "bare_jrnl_new_sample4" 1702619210
-  "/usr/local/texlive/2022/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "IEEE/references.bib" 0 -1 0 ""
-  "bare_jrnl_new_sample4.aux" 1702619210 10390 a6c7df082785d32672d5562732e44daa "pdflatex"
-  (generated)
-  "bare_jrnl_new_sample4.bbl"
-  "bare_jrnl_new_sample4.blg"
-["pdflatex"] 1702619204 "/Users/user/Library/CloudStorage/GoogleDrive-jtupayac@vols.utk.edu/My Drive/Advanced_Simulation/Advanced_Simulation_Paper/Latex/bare_jrnl_new_sample4.tex" "bare_jrnl_new_sample4.pdf" "bare_jrnl_new_sample4" 1702619210
-  "/Users/user/Library/CloudStorage/GoogleDrive-jtupayac@vols.utk.edu/My Drive/Advanced_Simulation/Advanced_Simulation_Paper/Latex/bare_jrnl_new_sample4.tex" 1702619197 51828 03dd2d7fb43ed99cbab10f05c8ac870f ""
+["pdflatex"] 1702630929 "/Users/user/Library/CloudStorage/GoogleDrive-jtupayac@vols.utk.edu/My Drive/Advanced_Simulation/Advanced_Simulation_Paper/Latex/bare_jrnl_new_sample4.tex" "bare_jrnl_new_sample4.pdf" "bare_jrnl_new_sample4" 1702630936
+  "/Users/user/Library/CloudStorage/GoogleDrive-jtupayac@vols.utk.edu/My Drive/Advanced_Simulation/Advanced_Simulation_Paper/Latex/bare_jrnl_new_sample4.tex" 1702630923 57722 e4a9b70fae06b7d85a9e729dd030f257 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -95,9 +88,8 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1674345714 2826445 aab4e57819c95b8dc455b03918b41ff5 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "bare_jrnl_new_sample4.aux" 1702619210 10390 a6c7df082785d32672d5562732e44daa "pdflatex"
-  "bare_jrnl_new_sample4.bbl" 0 -1 0 "bibtex bare_jrnl_new_sample4"
-  "bare_jrnl_new_sample4.tex" 1702619197 51828 03dd2d7fb43ed99cbab10f05c8ac870f ""
+  "bare_jrnl_new_sample4.aux" 1702630935 9417 a3822bf2f6dd6cc86996509c55d11bb1 "pdflatex"
+  "bare_jrnl_new_sample4.tex" 1702630923 57722 e4a9b70fae06b7d85a9e729dd030f257 ""
   "fig1.jpeg" 1702612752 18393 a97911e1715ce4fc1844292672b2711a ""
   "figs/4_2000.png" 1702616394 135043 724c593d3e037c69248159d4b3fa9939 ""
   "figs/Arch.png" 1702596154 541141 a050e0257fee18a0039138449ec11834 ""

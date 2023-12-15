@@ -31,7 +31,7 @@ To use the framework, follow the instructions in the documentation provided in t
 ## Stage 2
 <div align="center">
   <a href="https://www.youtube.com/watch?v=QCFEepq0dFw">
-    <img src="https://img.youtube.com/vi/your-first-video-ID/0.jpg" alt="Wildfire Management Framework Overview" style="width:50%;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Icon_1_blue.svg/1200px-Icon_1_blue.svg" alt="Wildfire Management Framework Overview" style="width:50%;">
   </a>
 </div>
 

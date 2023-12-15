@@ -116,6 +116,38 @@ def main():
     actions = range(num_plans)
 
     # transition function
+    # def trans_func(t, s, a):
+    #     """
+    #     transition
+    #     """
+    #     # terminal
+    #     if t >= T:
+    #         return "Delta"
+    #     # calculate pr
+    #     pr = []
+    #     for i in range(num_states):
+    #         # smaller state
+    #         if i < s[1]:
+    #             pr.append(
+    #                 success_pr[a] * degrade_pr[0, i]
+    #             )
+    #         else:
+    #             pr.append(np.sum([
+    #                 success_pr[a] * degrade_pr[0, i],
+    #                 (1 - success_pr[a]) * degrade_pr[s[1], i]
+    #             ]))
+    #     # sample new state according to pr JT WORK ON IT!
+    #     # print((t + 1, np.random.choice(
+    #     #     range(num_states), size=1, replace=False,
+    #     #     p=pr
+    #     # )[0]))
+    #     print(pr)
+    #     return (t + 1, np.random.choice(
+    #         range(num_states), size=1, replace=False,
+    #         p=pr
+    #     )[0])
+
+
     def trans_func(t, s, a):
         """
         transition
@@ -123,24 +155,30 @@ def main():
         # terminal
         if t >= T:
             return "Delta"
+        
         # calculate pr
         pr = []
         for i in range(num_states):
             # smaller state
             if i < s[1]:
-                pr.append(
-                    success_pr[a] * degrade_pr[0, i]
-                )
+                pr.append(success_pr[a] * degrade_pr[0, i])
             else:
                 pr.append(np.sum([
                     success_pr[a] * degrade_pr[0, i],
                     (1 - success_pr[a]) * degrade_pr[s[1], i]
                 ]))
-        # sample new state according to pr JT WORK ON IT!
         
+        # normalize probabilities
+        pr_sum = sum(pr)
+        pr_normalized = [p / pr_sum for p in pr]
+
+        # sample new state according to pr
+        # print("Before normalization:", pr)
+        # print("After normalization:", pr_normalized)
+        # input()
         return (t + 1, np.random.choice(
             range(num_states), size=1, replace=False,
-            p=pr
+            p=pr_normalized
         )[0])
     
     # reward function
@@ -193,6 +231,8 @@ def main():
     #HERE WE PARSE THE LOG PUSH IT TO DATABASE!!! THE INFO WE NEED!!!!
     # Specify the total number of lines in the file
     # Specify the path to the log file
+    # print(dir_path)
+    dir_path="/Users/user/Library/CloudStorage/GoogleDrive-jtupayac@vols.utk.edu/My Drive/Advanced_Simulation/Advanced_Simulation_Paper"
     log_file_path = dir_path + "/" + 'maintenance.log'
 
     # Calculate the total number of lines in the log file

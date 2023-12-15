@@ -4101,6 +4101,9 @@ get_Main().trace(targetAgent);]]></OnArrival>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[Max_FirePoints]]></ParameterName>
+					<ParameterValue Class="CodeValue">
+						<Code><![CDATA[8]]></Code>
+					</ParameterValue>
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[Max_Heatpoints]]></ParameterName>
