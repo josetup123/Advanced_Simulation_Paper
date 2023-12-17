@@ -40,7 +40,7 @@ To use the framework, follow the instructions in the documentation provided in t
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/wildfire-management-digital-twin.git
+git clone https://github.com/josetup123/Advanced_Simulation_Paper.git
 cd wildfire-management-digital-twin
 ```
 
