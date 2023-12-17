@@ -41,7 +41,7 @@ Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/josetup123/Advanced_Simulation_Paper.git
-cd wildfire-management-digital-twin
+cd Advanced_Simulation_Paper
 ```
 
 ## Research Paper
