@@ -1,0 +1,26 @@
+\relax 
+\citation{nations_as_nodate}
+\citation{baylis_economic_2023}
+\citation{haksar_distributed_2018}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{2}{}\protected@file@percent }
+\newlabel{Introduction}{{I}{2}}
+\citation{noauthor_deep_nodate}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Architecture and Information Collection}{3}{}\protected@file@percent }
+\newlabel{Architecture and Information Collection}{{II}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Problem Description}{3}{}\protected@file@percent }
+\newlabel{Problem Description}{{III}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Methodology}{3}{}\protected@file@percent }
+\newlabel{Methodology}{{IV}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Experimentation}{3}{}\protected@file@percent }
+\newlabel{Experimentation}{{V}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}Data Sources}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}Neighboring Station}{3}{}\protected@file@percent }
+\bibstyle{IEEEtran}
+\bibdata{references.bib}
+\bibcite{nations_as_nodate}{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  System Architecture: The illustration depicts the fundamental components of this digital twin. Initially, satellite imaging is employed from three sources—Landsat, MODIS, and VIIRS. Each dataset is standardized, offering a confidence level for the likelihood of a fire event at each represented heat point in the future. This data is presented in tabular format and forms the basis for the backend, comprising a Django-based API and a containerized MySQL platform. The API operates as a RESTful interface for socket communication and serves as an executor of operations within the inner backend. Real-time traffic information is sourced from TomTom live data, communicating with the OSRM routing engine to generate a realistic cost matrix for transportation in optimizing neighboring station placement. Following optimization, the results are visualized in the AnyLogic GUI. The second stage involves a reinforcement learning-based policy aiming to select the policy that minimizes the economic impact caused by a fire event. An advantage actor-critic is utilized to train independent clusters for each agent, empowering them to decide on the necessary containment actions for fire events. }}{4}{}\protected@file@percent }
+\newlabel{fig:arch}{{1}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-C}}Fire Containment}{4}{}\protected@file@percent }
+\newlabel{Fire Containment}{{\mbox  {V-C}}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion \& Further Directions}{4}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Deep Reinformcement Leanring Parameters: The experimental parameters are configured as follows: \texttt  {EPISODES=50000} dictates the number of agent simulations for policy improvement; \texttt  {DISCOUNT\_FACTOR=1.0} emphasizes the full consideration of future rewards; \texttt  {seed\_value = 42} ensures reproducibility through a set seed for the random number generator. \texttt  {num\_states = Max\_FirePoints} signifies the count of environmental states, often representing diverse fire scenarios or locations. \texttt  {num\_plans = 2} denotes the available action choices for the firefighter, likely relating to deciding whether to address a fire. \texttt  {T = 20} defines the time horizon, indicating the number of time steps before updating policies or the simulation duration. \texttt  {success\_pr = [0.0, 0.5, 0.9]} characterizes the success probability of extinguishing a fire, with values indicating varying success levels. The \texttt  {degrade\_pr} matrix portrays degradation probabilities for each state, reflecting the likelihood of environmental deterioration. \texttt  {C\_reward = 10} denotes the reward for fire prevention per time step, incentivizing a safe environment. \texttt  {C\_Operating} encapsu

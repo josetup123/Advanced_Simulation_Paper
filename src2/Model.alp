@@ -149,7 +149,7 @@ import java.sql.*;
 				<Variable Class="PlainVariable">
 					<Id>1701648454814</Id>
 					<Name><![CDATA[optimized]]></Name>
-					<X>230</X><Y>650</Y>
+					<X>220</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -222,7 +222,7 @@ import java.sql.*;
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA["/Users/user/Library/CloudStorage/GoogleDrive-jtupayac@vols.utk.edu/My Drive/Advanced_Simulation/Advanced_Simulation_Paper/src2/examples/AnyLogic+ML/Intro_to_RL(lecture_2)/A2C/main.py"]]></Code>
+							<Code><![CDATA["/Users/user/Library/CloudStorage/GoogleDrive-jtupayac@vols.utk.edu/My Drive/Advanced_Simulation/Advanced_Simulation_Paper/src2/scripts/A2C/main.py"]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1701326269367</Id>

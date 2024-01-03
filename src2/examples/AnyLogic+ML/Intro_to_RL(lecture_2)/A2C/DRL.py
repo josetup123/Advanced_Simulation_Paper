@@ -10,10 +10,6 @@ import torch
 import torch.optim as optim
 from ActorCritic import Actor, Critic
 import matplotlib.pyplot as plt
-import os
-
-dir_path = os.path.dirname(os.path.realpath(__file__))
-print(dir_path)
 
 
 def action_filter(state):
@@ -53,8 +49,7 @@ class Agent:
         if torch.cuda.is_available():
             self.dev = "cuda:0"
         else:
-            # self.dev = "cpu"
-            self.dev="cpu"
+            self.dev = "cpu"
         # ------------- whether to use action_filter ----------------
         if 'action_filter' in kwargs:
             self.filter_action = False
@@ -112,11 +107,11 @@ class Agent:
         # value, distribution
         self.V_pred.append(value[0])
         dist = policy_dist.to('cpu').detach().numpy()
-        # valid_actions JT ACTIONS!!
-        # if self.filter_action:
-        #     valid_actions = self.action_filter(state)
-        # else:
-        valid_actions = self.actions
+        # valid_actions
+        if self.filter_action:
+            valid_actions = self.action_filter(state)
+        else:
+            valid_actions = self.actions
         # choose action
         action_pr = np.array([
             np.exp(dist[i]) if self.actions[i] in valid_actions
@@ -149,11 +144,11 @@ class Agent:
         with torch.no_grad():
             dist = self.actor(input_seq).to('cpu').numpy()
         self.actor.train()
-        # valid_actions JT CHANGES
-        # if self.filter_action:
-        #     valid_actions = self.action_filter(state)
-        # else:
-        valid_actions = self.actions
+        # valid_actions
+        if self.filter_action:
+            valid_actions = self.action_filter(state)
+        else:
+            valid_actions = self.actions
         # choose action
         action_pr = np.array([
             np.exp(dist[i]) if self.actions[i] in valid_actions
@@ -226,7 +221,7 @@ class Agent:
         ax.set_xlabel('Epochs')
         ax.set_ylabel('G')
         fig.tight_layout()
-        fig.savefig(dir_path+"/"+'{}{}_G.png'.format(dir, self.name), dpi=600)
+        fig.savefig('{}{}_G.png'.format(dir, self.name), dpi=600)
         plt.close()
         return
     
@@ -256,7 +251,7 @@ class Agent:
             ax.set_xlabel('Epochs')
             ax.set_ylabel('Loss')
             fig.tight_layout()
-            fig.savefig(dir_path+"/"+'{}{}_{}_loss.png'.format(
+            fig.savefig('{}{}_{}_loss.png'.format(
                 dir, self.name, "actor" if i == 0 else "critic"
             ), dpi=600)
         return
@@ -350,7 +345,7 @@ class DRL_Env:
         if write_log:
             logging.info("Learning...")
         for iter in range(episodes):
-            if iter % 100== 0: #JT CJANGES 10000
+            if iter % 10000 == 0:
                 print("Iteration {}".format(iter))
             # if True:
             if write_log:
@@ -388,8 +383,6 @@ class DRL_Env:
             envs = self.agent.environment
         # ======================= LOOP ========================
         epoch = 0
-
-        #JT EDITS
         while state != 'Delta':
             # ------------------ take action ------------------
             action = self.agent.simulate_action(state)

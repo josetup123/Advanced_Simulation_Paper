@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.21)  15 DEC 2023 12:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.21)  26 DEC 2023 23:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -163,44 +163,35 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/algorithms/algorithmic.sty
-Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
- (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks22
-)
-\c@ALC@unique=\count278
-\c@ALC@line=\count279
-\c@ALC@rem=\count280
-\c@ALC@depth=\count281
-\ALC@tlm=\skip53
-\algorithmicindent=\skip54
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
  (/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count282
-\float@exts=\toks23
+\c@float@type=\count278
+\float@exts=\toks22
 \float@box=\box54
-\@float@everytoks=\toks24
+\@float@everytoks=\toks23
 \@floatcapt=\box55
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\@float@every@algorithm=\toks25
-\c@algorithm=\count283
+\@float@every@algorithm=\toks24
+\c@algorithm=\count279
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen171
 \ar@mcellbox=\box56
 \extrarowheight=\dimen172
-\NC@list=\toks26
-\extratabsurround=\skip55
-\backup@length=\skip56
+\NC@list=\toks25
+\extratabsurround=\skip53
+\backup@length=\skip54
 \ar@cellbox=\box57
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
- (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks26
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
 \caption@tempdima=\dimen173
 \captionmargin=\dimen174
@@ -214,25 +205,25 @@ Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEtablestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\normalfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\normalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONconference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi \fi  on input line 1176.
 )
-\c@KVtest=\count284
-\sf@farskip=\skip57
+\c@KVtest=\count280
+\sf@farskip=\skip55
 \sf@captopadj=\dimen181
-\sf@capskip=\skip58
-\sf@nearskip=\skip59
-\c@subfigure=\count285
-\c@subfigure@save=\count286
-\c@lofdepth=\count287
-\c@subtable=\count288
-\c@subtable@save=\count289
-\c@lotdepth=\count290
-\sf@top=\skip60
-\sf@bottom=\skip61
+\sf@capskip=\skip56
+\sf@nearskip=\skip57
+\c@subfigure=\count281
+\c@subfigure@save=\count282
+\c@lofdepth=\count283
+\c@subtable=\count284
+\c@subtable@save=\count285
+\c@lotdepth=\count286
+\sf@top=\skip58
+\sf@bottom=\skip59
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/sttools/stfloats.sty
 Package: stfloats 2017/03/27 v3.3 Improve float mechanism and baselineskip settings
-\@dblbotnum=\count291
-\c@dblbotnumber=\count292
+\@dblbotnum=\count287
+\c@dblbotnumber=\count288
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -260,10 +251,106 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/breakurl/breakurl.sty
+Package: breakurl 2013/04/10 v1.40 Breakable hyperref URLs
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks29
+\XKV@tempa@toks=\toks30
+)
+\XKV@depth=\count289
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+
+Package breakurl Warning: You are using breakurl while processing via pdflatex.
+(breakurl)                \burl will be just a synonym of \url.
+(breakurl)                 on input line 48.
+
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip60
+\LTright=\skip61
+\LTpre=\skip62
+\LTpost=\skip63
+\LTchunksize=\count290
+\LTcapwidth=\dimen184
+\LT@head=\box58
+\LT@firsthead=\box59
+\LT@foot=\box60
+\LT@lastfoot=\box61
+\LT@gbox=\box62
+\LT@cols=\count291
+\LT@rows=\count292
+\c@LT@tables=\count293
+\c@LT@chunks=\count294
+\LT@p@ftn=\toks31
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/xtab/xtab.sty
+Package: xtab 2011/07/31 v2.3f Extended supertabular package
+\c@tracingst=\count295
+\PWSTcapht=\dimen185
+\ST@wd=\dimen186
+\ST@rightskip=\skip64
+\ST@leftskip=\skip65
+\ST@parfillskip=\skip66
+\c@PWSTtable=\count296
+\PWSTlastpage=\count297
+\PWSTpenultimate=\count298
+\PWSTcurpage=\count299
+\PWSTtempc=\count300
+\PWSTlines=\count301
+\PWST@lastht=\dimen187
+\PWST@generalht=\dimen188
+\PWST@ht=\dimen189
+\ST@pageleft=\dimen190
+\ST@headht=\dimen191
+\ST@tailht=\dimen192
+\ST@pagesofar=\dimen193
+\ST@pboxht=\dimen194
+\ST@lineht=\dimen195
+\ST@stretchht=\dimen196
+\ST@prevht=\dimen197
+\ST@toadd=\dimen198
+\ST@dimen=\dimen199
+\ST@pbox=\box63
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count302
+\c@ALG@rem=\count303
+\c@ALG@nested=\count304
+\ALG@tlm=\skip67
+\ALG@thistlm=\skip68
+\c@ALG@Lnr=\count305
+\c@ALG@blocknr=\count306
+\c@ALG@storecount=\count307
+\c@ALG@tmpcounter=\count308
+\ALG@tmplength=\skip69
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+
+
+Package natbib Warning: The `cite' package should not be used
+(natbib)                with natbib. Use option `sort' instead.
+
+\bibhang=\skip70
+\bibsep=\skip71
+LaTeX Info: Redefining \cite on input line 694.
+LaTeX Info: Redefining \citenum on input line 708.
+\c@NAT@ctr=\count309
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count293
-\l__pdf_internal_box=\box58
+\l__color_backend_stack_int=\count310
+\l__pdf_internal_box=\box64
 )
 
 LaTeX Warning: Unused global option(s):
@@ -272,20 +359,20 @@ LaTeX Warning: Unused global option(s):
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
 
 -- Lines per column: 58 (exact).
 Package caption Info: Begin \AtBeginDocument code.
@@ -293,170 +380,132 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count294
-\scratchdimen=\dimen184
-\scratchbox=\box59
-\nofMPsegments=\count295
-\nofMParguments=\count296
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count297
-\MPscratchDim=\dimen185
-\MPnumerator=\count298
-\makeMPintoPDFobject=\count299
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count311
+\scratchdimen=\dimen256
+\scratchbox=\box65
+\nofMPsegments=\count312
+\nofMParguments=\count313
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count314
+\MPscratchDim=\dimen257
+\MPnumerator=\count315
+\makeMPintoPDFobject=\count316
+\everyMPtoPDFconversion=\toks33
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 69.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+** WARNING: \and is valid only when in conference or peerreviewca
+modes (line 56).
+
+Underfull \hbox (badness 6125) in paragraph at lines 85--101
+[]\OT1/ptm/m/n/10 Wildfires im-pact pop-u-la-tions dif-fer-ently com-mu-ni-ties
+ []
+
+[1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-<figs/Arch.png, id=10, 986.68625pt x 497.86pt>
-File: figs/Arch.png Graphic file (type png)
-<use figs/Arch.png>
-Package pdftex.def Info: figs/Arch.png  used on input line 107.
-(pdftex.def)             Requested size: 341.43091pt x 170.72113pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 128.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 128.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<figs//Arch.png, id=10, 615.2586pt x 308.8338pt>
+File: figs//Arch.png Graphic file (type png)
+<use figs//Arch.png>
+Package pdftex.def Info: figs//Arch.png  used on input line 151.
+(pdftex.def)             Requested size: 341.43501pt x 170.71677pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7685) has occurred while \output is active []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
-
- []
-
-
-Overfull \hbox (4.9519pt too wide) detected at line 158
-[]
- []
-
-[2] [3 <./figs/Arch.png>]
-<figs/parameters.png, id=26, 857.2025pt x 380.42125pt>
-File: figs/parameters.png Graphic file (type png)
-<use figs/parameters.png>
-Package pdftex.def Info: figs/parameters.png  used on input line 300.
+<figs//parameters.png, id=12, 857.2025pt x 380.42125pt>
+File: figs//parameters.png Graphic file (type png)
+<use figs//parameters.png>
+Package pdftex.def Info: figs//parameters.png  used on input line 344.
 (pdftex.def)             Requested size: 227.61537pt x 142.26869pt.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 301.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 345.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<figs/stages.png, id=27, 941.5175pt x 392.46625pt>
-File: figs/stages.png Graphic file (type png)
-<use figs/stages.png>
-Package pdftex.def Info: figs/stages.png  used on input line 308.
+<figs//stages.png, id=13, 941.5175pt x 392.46625pt>
+File: figs//stages.png Graphic file (type png)
+<use figs//stages.png>
+Package pdftex.def Info: figs//stages.png  used on input line 352.
 (pdftex.def)             Requested size: 270.30347pt x 113.8063pt.
 
-Overfull \hbox (18.30347pt too wide) in paragraph at lines 308--309
+Overfull \hbox (18.30347pt too wide) in paragraph at lines 352--353
  [][] 
  []
 
-<figs/manager_actor_loss.png, id=28, 578.16pt x 433.62pt>
-File: figs/manager_actor_loss.png Graphic file (type png)
-<use figs/manager_actor_loss.png>
-Package pdftex.def Info: figs/manager_actor_loss.png  used on input line 314.
+<figs//manager_actor_loss.png, id=14, 578.16pt x 433.62pt>
+File: figs//manager_actor_loss.png Graphic file (type png)
+<use figs//manager_actor_loss.png>
+Package pdftex.def Info: figs//manager_actor_loss.png  used on input line 358.
 (pdftex.def)             Requested size: 227.61641pt x 113.81041pt.
-<figs/manager_critic_loss.png, id=29, 578.16pt x 433.62pt>
-File: figs/manager_critic_loss.png Graphic file (type png)
-<use figs/manager_critic_loss.png>
-Package pdftex.def Info: figs/manager_critic_loss.png  used on input line 321.
+<figs//manager_critic_loss.png, id=15, 578.16pt x 433.62pt>
+File: figs//manager_critic_loss.png Graphic file (type png)
+<use figs//manager_critic_loss.png>
+Package pdftex.def Info: figs//manager_critic_loss.png  used on input line 365.
 (pdftex.def)             Requested size: 227.61641pt x 113.81041pt.
-<figs/manager_G.png, id=30, 578.16pt x 433.62pt>
-File: figs/manager_G.png Graphic file (type png)
-<use figs/manager_G.png>
-Package pdftex.def Info: figs/manager_G.png  used on input line 327.
+<figs//manager_G.png, id=16, 578.16pt x 433.62pt>
+File: figs//manager_G.png Graphic file (type png)
+<use figs//manager_G.png>
+Package pdftex.def Info: figs//manager_G.png  used on input line 371.
 (pdftex.def)             Requested size: 227.61641pt x 113.81041pt.
-<figs/4_2000.png, id=31, 348.30125pt x 399.4925pt>
-File: figs/4_2000.png Graphic file (type png)
-<use figs/4_2000.png>
-Package pdftex.def Info: figs/4_2000.png  used on input line 333.
+<figs//4_2000.png, id=17, 348.30125pt x 399.4925pt>
+File: figs//4_2000.png Graphic file (type png)
+<use figs//4_2000.png>
+Package pdftex.def Info: figs//4_2000.png  used on input line 377.
 (pdftex.def)             Requested size: 142.26234pt x 142.26277pt.
+[2] (./main.bbl
+Overfull \hbox (105.87506pt too wide) in paragraph at lines 26--31
+\OT1/ptm/m/n/10 wild^^Lres-[]increase-[]integrated-[]strategies-[]forests-[]climate-[]and-[]sustainability-[]are-[]ever-[]0$ 
+ []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4 <./figs/parameters.png> <./figs/stages.png> <./figs/manager_actor_loss.png> <./figs/manager_critic_loss.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 905--906
-\OT1/ptm/m/n/10 https://www.un.org/en/un-chronicle/wildfires-increase-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 905--906
-\OT1/ptm/m/n/10 integrated-strategies-forests-climate-and-sustainability-are-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 911--912
-[]\OT1/ptm/m/n/10 [4]K. B. Ph.D, \Wild-fires de-stroy thou-sands
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 911--912
-\OT1/ptm/m/n/10 of struc-tures each year," Nov. 16, 2020.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 911--912
-\OT1/ptm/m/n/10 https://headwaterseconomics.org/natural-hazards/structures-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 915--916
-[]\OT1/ptm/m/n/10 [7]\Deep re-in-force-ment learn-ing for con-ser-va-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 915--916
-\OT1/ptm/m/n/10 de-ci-sions - Lapey-ro-lerie - 2022 - Meth-ods in
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 915--916
-\OT1/ptm/m/n/10 Ecol-ogy and Evo-lu-tion - Wi-ley On-line Li-brary."
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 915--916
-\OT1/ptm/m/n/10 https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-
- []
-
-[5 <./figs/manager_G.png> <./figs/4_2000.png>]
+ [3 <./figs//Arch.png>] [4 <./figs//parameters.png> <./figs//stages.png> <./figs//manager_actor_loss.png> <./figs//manager_critic_loss.png> <./figs//manager_G.png>]) [5 <./figs//4_2000.png>]
 <fig1.jpeg, id=47, 89.352pt x 111.69pt>
 File: fig1.jpeg Graphic file (type jpg)
 <use fig1.jpeg>
-Package pdftex.def Info: fig1.jpeg  used on input line 935.
+Package pdftex.def Info: fig1.jpeg  used on input line 969.
 (pdftex.def)             Requested size: 72.26973pt x 90.33716pt.
 File: fig1.jpeg Graphic file (type jpg)
 <use fig1.jpeg>
-Package pdftex.def Info: fig1.jpeg  used on input line 935.
+Package pdftex.def Info: fig1.jpeg  used on input line 969.
 (pdftex.def)             Requested size: 72.26973pt x 90.33716pt.
+<fig2.png, id=50, 256.7994pt x 256.7994pt>
+File: fig2.png Graphic file (type png)
+<use fig2.png>
+Package pdftex.def Info: fig2.png  used on input line 974.
+(pdftex.def)             Requested size: 72.26775pt x 72.26775pt.
+File: fig2.png Graphic file (type png)
+<use fig2.png>
+Package pdftex.def Info: fig2.png  used on input line 974.
+(pdftex.def)             Requested size: 72.26775pt x 72.26775pt.
  [6
 
- <./fig1.jpeg>] (./main.aux) ) 
+ <./fig1.jpeg> <./fig2.png>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 4728 strings out of 478268
- 83444 string characters out of 5846347
- 395468 words of memory out of 5000000
- 22859 multiletter control sequences out of 15000+600000
- 513629 words of font info for 109 fonts, out of 8000000 for 9000
+ 6042 strings out of 478268
+ 103898 string characters out of 5846347
+ 433890 words of memory out of 5000000
+ 24139 multiletter control sequences out of 15000+600000
+ 511130 words of font info for 106 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 55i,13n,63p,1710b,334s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,13n,63p,1710b,383s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (6 pages, 4198516 bytes).
+Output written on main.pdf (6 pages, 4308275 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 70 words of extra memory for PDF output out of 10000 (max. 10000000)
 
