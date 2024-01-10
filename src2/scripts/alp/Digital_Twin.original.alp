@@ -2892,14 +2892,9 @@ this.deleteSelf();}]]></EntryAction>
 
 if (this.activated==1){
 
-
-//Firefighter r = get_Main().add_firefigthers("", uniform_discr(30, 60), this.latitude, this.longitude, this.latitude_destination, this.longitude_destination, this.fire_index_assigned);
-
-//FIRST FIREGITHER TO SELECT
-//Firefighter r = findFirst(firefigh, a->a.number==0);
-
+Firefighter r = get_Main().add_firefigthers("", uniform_discr(30, 60), this.latitude, this.longitude, this.latitude_destination, this.longitude_destination, this.fire_index_assigned);
 //name, actions, input_size, actor_hidden_layers, output_size, actor_lr, action_filter, discount_factor, terminal_reward, critic_hidden_layers, critic_lr)
-//r.setLatLon(this.latitude, this.longitude);
+r.setLatLon(this.latitude, this.longitude);
 //r.moveTo(this.longitude_destination, this.fire_index_assigned);
 
 
@@ -2908,7 +2903,7 @@ GISRoute route = get_Main().map.getRoute(this.latitude, this.longitude,this.lati
 //traceln(route);
 // Move truck along the path
 
-//r.moveTo(this.latitude_destination, this.longitude_destination);
+r.moveTo(this.latitude_destination, this.longitude_destination);
 
 
 
